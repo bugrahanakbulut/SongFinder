@@ -50,9 +50,7 @@ public class RequestController {
                 // System.out.println(result.toString());
                 Object newObject = mapper.readValue(result.toString(), expectedClass);
                 queryResults.add((T) newObject);
-
-
-
+                /// https://www.baeldung.com/jackson-nested-values
             }
 
 
