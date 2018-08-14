@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.Map;
 
 @Entity
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -17,11 +18,14 @@ public class Track {
     @GeneratedValue
     private long dbId;
     private String idSpotify;
-
-    @JsonProperty("artist")
     private String artistName;
-
     private String name;
+
+    @SuppressWarnings("unchecked")
+    @JsonProperty("artist")
+    private void unpackNestedObjects(Map<String,Object> artist){
+        this.setArtistName((String) artist.get("name"));
+    }
 
     public long getDbId() {
         return dbId;
@@ -54,6 +58,9 @@ public class Track {
     public void setName(String name) {
         this.name = name;
     }
+
+
+
 
     @Override
     public String toString() {
