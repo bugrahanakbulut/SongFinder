@@ -28,27 +28,27 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
-          <entry key="java" value="34" />
+          <entry key="java" value="35" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="34" />
+          <entry key="JAVA" value="35" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="30" />
-          <entry key="java" value="6153" />
+          <entry key="java" value="6269" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6153" />
+          <entry key="JAVA" value="6269" />
           <entry key="PLAIN_TEXT" value="30" />
           <entry key="XML" value="6" />
         </counts>
@@ -60,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/SongFinderApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="34">
+              <caret line="3" column="68" lean-forward="true" selection-start-line="3" selection-start-column="68" selection-end-line="3" selection-end-column="68" />
               <folding>
                 <element signature="e#255#256#0" expanded="true" />
                 <element signature="e#318#319#0" expanded="true" />
@@ -91,7 +91,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/SpotifyController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="415">
@@ -100,6 +100,22 @@
                 <element signature="imports" expanded="true" />
                 <element signature="e#1209#1210#0" expanded="true" />
                 <element signature="e#1237#1238#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/TrackController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#524#525#0" expanded="true" />
+                <element signature="e#562#563#0" expanded="true" />
+                <element signature="e#612#613#0" expanded="true" />
+                <element signature="e#658#659#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,12 +142,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Repositories/ArtistRepo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/Artist.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Repositories/TrackRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/TrackController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/Track.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/RequestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/SpotifySearch.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/SpotifyController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/TrackController.java" />
       </list>
     </option>
   </component>
@@ -187,6 +203,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SongFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -205,7 +230,7 @@
     <property name="SearchEverywhereHistoryKey" value="Repository&#9;FILE&#9;jar://C:/Program Files (x86)/Java/jdk1.7.0_79/jre/lib/jfr.jar!/oracle/jrockit/jfr/Repository.class&#10;Repos&#9;FILE&#9;file://C:/Users/bugrahan.akbulut/IdeaProjects/SongFinder/src/main/java/com/example/SongFinder/Repositories" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534330380825" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534330914010" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../apitest" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -226,7 +251,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SpotifyController">
+  <component name="RunManager" selected="Spring Boot.SongFinderApplication">
     <configuration name="SpotifyController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.SongFinder.Controllers.SpotifyController" />
       <module name="SongFinder" />
@@ -272,12 +297,12 @@
       <workItem from="1534253215248" duration="894000" />
       <workItem from="1534254731741" duration="476000" />
       <workItem from="1534311688350" duration="248000" />
-      <workItem from="1534311964460" duration="11512000" />
+      <workItem from="1534311964460" duration="12211000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28324000" />
+    <option name="totallyTimeSpent" value="29023000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
@@ -298,10 +323,10 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3290993" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3290993" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Spring" order="9" weight="0.3290993" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3290993" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
@@ -384,29 +409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/TrackController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="51" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/SongFinderApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/SpotifySearch.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -449,6 +451,31 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1209#1210#0" expanded="true" />
             <element signature="e#1237#1238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/SongFinderApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="3" column="68" lean-forward="true" selection-start-line="3" selection-start-column="68" selection-end-line="3" selection-end-column="68" />
+          <folding>
+            <element signature="e#255#256#0" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/TrackController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#562#563#0" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+            <element signature="e#658#659#0" expanded="true" />
           </folding>
         </state>
       </provider>

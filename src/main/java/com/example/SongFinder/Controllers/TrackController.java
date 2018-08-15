@@ -13,6 +13,18 @@ import java.util.List;
 @RequestMapping(value = "/track")
 public class TrackController {
 
+    public static class FindPopularSongsRequest {
+        private String country;
+
+        public String getCountry() {
+            return country;
+        }
+
+        public void setCountry(String country) {
+            this.country = country;
+        }
+    }
+
     private ArrayList<Track> trackList;
     private TrackRepository trackRepo;
 
@@ -34,20 +46,22 @@ public class TrackController {
         return trackList;
     }
 
-    @RequestMapping(value = "/country={country}", method = RequestMethod.PUT)
-    public void trackFinder(@PathVariable String country){
+    @RequestMapping(method = RequestMethod.PUT)
+    public void trackFinder(@RequestBody FindPopularSongsRequest requestBody){
         String requesBase = "http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=";
-        requesBase += country;
+        requesBase += requestBody.getCountry();
         requesBase += "&api_key=56ad71507512a288c28c1fffb1be0a19";
-        requesBase += "&limit=25";
+        requesBase += "&limit=10";
         requesBase += "&format=json";
         String[] properties = {"tracks", "track"};
         // System.out.println(requesBase);
         List<Track> popularTracks = RequestController.getRequest(requesBase, Track.class, properties);
         for (Track t : popularTracks) {
-            t.setCountry(country);
+            t.setCountry(requestBody.getCountry());
             this.trackList.add(t);
         }
         trackRepo.save(popularTracks);
     }
 }
+
+
