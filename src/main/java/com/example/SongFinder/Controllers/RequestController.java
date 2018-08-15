@@ -40,7 +40,6 @@ public class RequestController {
             //System.out.println(jsonObject.toString());
             ObjectMapper mapper = new ObjectMapper();
 
-            // Old version of deserialization I'm keeping that code block just in case for now
 
             JSONObject subResults = null;
 
