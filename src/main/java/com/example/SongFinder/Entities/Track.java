@@ -22,6 +22,7 @@ public class Track {
     private String country;
     private int rank;
 
+
     @SuppressWarnings("unchecked")
     @JsonProperty("artist")
     private void unpackArtisObject(Map<String,Object> artist){
@@ -96,7 +97,7 @@ public class Track {
 
         trackToString.append("ARTIST:");
         trackToString.append(this.getArtistName());
-        trackToString.append("\n");
+
         return trackToString.toString();
     }
 }
