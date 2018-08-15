@@ -34,6 +34,9 @@ public class TrackController {
         String[] properties = {"tracks", "track"};
         // System.out.println(requesBase);
         List<Track> popularTracks = RequestController.getRequest(requesBase, Track.class, properties);
+        for (Track t : popularTracks) {
+            t.setCountry(country);
+        }
         trackRepo.save(popularTracks);
     }
 }

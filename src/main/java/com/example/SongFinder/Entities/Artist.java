@@ -49,8 +49,6 @@ public class Artist {
         artistToString.append("ARTIST NAME: ");
         artistToString.append(this.getName());
         artistToString.append("\n");
-
-
-        return super.toString();
+        return artistToString.toString();
     }
 }

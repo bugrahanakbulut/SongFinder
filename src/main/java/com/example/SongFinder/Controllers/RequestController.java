@@ -1,5 +1,6 @@
 package com.example.SongFinder.Controllers;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.CollectionType;
 import com.fasterxml.jackson.databind.type.TypeFactory;
@@ -36,18 +37,20 @@ public class RequestController {
             JSONObject jsonObject = new JSONObject(jsonResults.toString());
             //System.out.println(jsonObject.toString());
 
-            JSONObject subResults = null;
 
-            for(int i = 0; i < properties.length - 1; i++){
-                subResults = jsonObject.getJSONObject(properties[i]);
-            }
-            JSONArray results = subResults.getJSONArray(properties[properties.length - 1]);
+             JSONObject subResults = null;
+
+                         for(int i = 0; i < properties.length - 1; i++){
+                             subResults = jsonObject.getJSONObject(properties[i]);
+                        }
+                         JSONArray results = subResults.getJSONArray(properties[properties.length - 1]);
+
 
             queryResults = new ArrayList<>();
             ObjectMapper mapper = new ObjectMapper();
             for(int i = 0; i < results.length(); i++){
                 JSONObject result = results.getJSONObject(i);
-                // System.out.println(result.toString());
+                //System.out.println(result.toString());
                 Object newObject = mapper.readValue(result.toString(), expectedClass);
                 queryResults.add((T) newObject);
                 /// https://www.baeldung.com/jackson-nested-values
