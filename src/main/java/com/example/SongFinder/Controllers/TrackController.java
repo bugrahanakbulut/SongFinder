@@ -60,11 +60,11 @@ public class TrackController {
             t.setCountry(requestBody.getCountry());
             this.trackList.add(t);
         }
-
-        trackRepo.save(popularTracks.getTrackList());
+        ArrayList<Track> results = searchTracks(popularTracks);
+        trackRepo.save(results);
     }
 
-    public void searchTracks(TrackList trackList2Search){
+    public ArrayList<Track> searchTracks(TrackList trackList2Search){
         ArrayList<Track> founded = new ArrayList<>();
         for (Track searchItem : trackList2Search.getTrackList()){
             SpotifyTrackList searchResult = SpotifyController.searchTrack(searchItem.getTrackName(), "track");
@@ -77,6 +77,7 @@ public class TrackController {
             }
 
         }
+        return founded;
     }
 }
 

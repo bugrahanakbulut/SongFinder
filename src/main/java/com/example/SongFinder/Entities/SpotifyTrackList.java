@@ -36,6 +36,7 @@ public class SpotifyTrackList {
                 // WATCH OUT IT OVERWRITES
                 track.setArtistName((String) artist.get("name"));
             }
+            System.out.println(track.toString());
         }
     }
 

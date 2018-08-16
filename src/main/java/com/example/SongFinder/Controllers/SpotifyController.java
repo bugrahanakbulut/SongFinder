@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Map;
 
 public class SpotifyController {
-    private static final String accessToken = "BQDIFGDTKUIk6f9jGjahqbshCJFvOHYKhOtLEf_N-2tU9qSwSPhd2CgfP1gXK1oSjQvFXPgrFSJMb2BnaHceP-87qNMK8QUrgyUonbhDZ97Fl3zpV8A8gv1pThKkRSYOuS2avwRr7d0CCkifxfXcYxWYeN5MZIndoJ8PAqdvtdHxCUJwWkRwBkmEShLp64jtuNZVQNNu6aoX4y70qVLAUQFFhCPsSZJz_NX8xVvTnT4AoEPv4tQd9_lNfRkgPLshWvTTMbLGKGL-dZLsIwYSaw" ;
+    private static final String accessToken = "BQB47kA6IvLvS0bHX54-VI9nxqwtupB2h8s47oDha6KZSNjHOrlZ3ryptQ9XqAzn5f-juAuc0uFDct8Xzm-bM-v98fDrWHlObqemRPfStephOWTaCUVbFmbtk7FGJGjCB6L0oP7QBK_6zxfMaIWHPk78ZkskuwLnfjCL-TmT4d4OS-AVz0dFn3LGWBfqYzTerBGIq0RmG0i2T1m_yzRCcFJDBXiwdNUMT-pzgs0BqmniXEFrI7RVDWsXH_u_FJoQnNHaWlQD08jxD4VDqYCdaw" ;
     private static final String type = ModelObjectType.TRACK.getType();
 
     private static final SpotifyApi spotifyApi = new SpotifyApi.Builder().
@@ -45,9 +45,11 @@ public class SpotifyController {
     }
 
     public static SpotifyTrackList searchTrack(String key, String type){
+        String query = key.replace(" ", "+");
+        query = query.toLowerCase();
         StringBuilder http = new StringBuilder();
         http.append("https://api.spotify.com/v1/search?");
-        http.append("q=" + key);
+        http.append("q=" + query);
         http.append("&type=" + type);
         http.append("&limit=10");
         http.append("&offset=0");
@@ -55,8 +57,7 @@ public class SpotifyController {
         Map<String, String> header = new HashMap<>();
         header.put("Authorization", "Bearer " + accessToken);
 
-        SpotifyTrackList trackList = RequestController.getRequest(http.toString(), SpotifyTrackList.class, header);
-        return trackList;
+        return RequestController.getRequest(http.toString(), SpotifyTrackList.class, header);
 
        /*
         try {
@@ -89,9 +90,5 @@ public class SpotifyController {
             e.printStackTrace();
         }
         */
-    }
-
-    public static void main(String[] args){
-        searchTrack("Biliyorum", "track");
     }
 }
