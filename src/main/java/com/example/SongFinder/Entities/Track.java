@@ -11,7 +11,6 @@ import java.util.Map;
 
 @Entity
 @JsonIgnoreProperties(ignoreUnknown = true)
-@JsonRootName("tracks")
 public class Track {
     @Id
     @GeneratedValue
@@ -22,23 +21,6 @@ public class Track {
     private String country;
     private int rank;
 
-
-    @SuppressWarnings("unchecked")
-    @JsonProperty("artist")
-    private void unpackArtisObject(Map<String,Object> artist){
-        this.setArtistName((String) artist.get("name"));
-    }
-
-    @SuppressWarnings("unchecked")
-    @JsonProperty("name")
-    private void getTrackNameJson(String trackName){
-        this.setTrackName(trackName);
-    }
-    @SuppressWarnings("unchecked")
-    @JsonProperty("@attr")
-    private void getTrackRank(Map<String, Object> trackAttr){
-        this.setRank(Integer.valueOf((String) (trackAttr.get("rank"))));
-    }
 
     public long getDbId() {
         return dbId;
@@ -97,6 +79,10 @@ public class Track {
 
         trackToString.append("ARTIST:");
         trackToString.append(this.getArtistName());
+        trackToString.append("\n");
+
+        trackToString.append("RANK: ");
+        trackToString.append(this.getRank());
 
         return trackToString.toString();
     }

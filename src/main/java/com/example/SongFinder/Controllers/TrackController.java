@@ -1,7 +1,8 @@
 package com.example.SongFinder.Controllers;
 
-import com.example.SongFinder.Entities.Artist;
+import com.example.SongFinder.Entities.SpotifyTrackList;
 import com.example.SongFinder.Entities.Track;
+import com.example.SongFinder.Entities.TrackList;
 import com.example.SongFinder.Repositories.TrackRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -53,14 +54,29 @@ public class TrackController {
         requesBase += "&api_key=56ad71507512a288c28c1fffb1be0a19";
         requesBase += "&limit=10";
         requesBase += "&format=json";
-        String[] properties = {"tracks", "track"};
         // System.out.println(requesBase);
-        List<Track> popularTracks = RequestController.getRequest(requesBase, Track.class, properties);
-        for (Track t : popularTracks) {
+        TrackList popularTracks = RequestController.getRequest(requesBase, TrackList.class, null);
+        for (Track t : popularTracks.getTrackList()) {
             t.setCountry(requestBody.getCountry());
             this.trackList.add(t);
         }
-        trackRepo.save(popularTracks);
+
+        trackRepo.save(popularTracks.getTrackList());
+    }
+
+    public void searchTracks(TrackList trackList2Search){
+        ArrayList<Track> founded = new ArrayList<>();
+        for (Track searchItem : trackList2Search.getTrackList()){
+            SpotifyTrackList searchResult = SpotifyController.searchTrack(searchItem.getTrackName(), "track");
+            for(Track result : searchResult.getTrackList()){
+                if(result.getArtistName().equals(searchItem.getArtistName())
+                        && result.getTrackName().equals(searchItem.getTrackName())){
+                    founded.add(result);
+                    searchResult.getTrackList().remove(result);
+                }
+            }
+
+        }
     }
 }
 

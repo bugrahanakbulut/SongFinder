@@ -1,5 +1,7 @@
 package com.example.SongFinder.Controllers;
 
+import com.example.SongFinder.Entities.SpotifyTrackList;
+import com.example.SongFinder.Entities.TrackList;
 import com.google.gson.JsonObject;
 import com.wrapper.spotify.SpotifyApi;
 import com.wrapper.spotify.enums.ModelObjectType;
@@ -16,10 +18,12 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class SpotifyController {
-    private static final String accessToken = "BQBf6UTNcOnlsHFafiKkC7q-9qkoMfPd5Hvzt9EOhrhXg_AK0yPT6kXcQvCF_4tlUTZaC8ZgTF-UhdJSA3udpX7X6SRLBIjzKvBujtnVUe-CnNt9EF_OhR8LGCKfneeXxuZqrABj7K3geudRVw9ZJWC0XJ5mZd7PrXmEt0q_EBgHNcfkIGhnZLbBKXJ-DSEc_8OKy4_-itqhZDNhzm8ahFlMfhhdeXlH9_6EcTfU6bY7wr-fYDw8VJXh2saGtBr1d_yBdQAV8kQXED9PG15xcA" ;
+    private static final String accessToken = "BQDIFGDTKUIk6f9jGjahqbshCJFvOHYKhOtLEf_N-2tU9qSwSPhd2CgfP1gXK1oSjQvFXPgrFSJMb2BnaHceP-87qNMK8QUrgyUonbhDZ97Fl3zpV8A8gv1pThKkRSYOuS2avwRr7d0CCkifxfXcYxWYeN5MZIndoJ8PAqdvtdHxCUJwWkRwBkmEShLp64jtuNZVQNNu6aoX4y70qVLAUQFFhCPsSZJz_NX8xVvTnT4AoEPv4tQd9_lNfRkgPLshWvTTMbLGKGL-dZLsIwYSaw" ;
     private static final String type = ModelObjectType.TRACK.getType();
 
     private static final SpotifyApi spotifyApi = new SpotifyApi.Builder().
@@ -40,17 +44,21 @@ public class SpotifyController {
         }
     }
 
-    private static void searchTrack(String key, String type){
+    public static SpotifyTrackList searchTrack(String key, String type){
         StringBuilder http = new StringBuilder();
         http.append("https://api.spotify.com/v1/search?");
         http.append("q=" + key);
         http.append("&type=" + type);
         http.append("&limit=10");
         http.append("&offset=0");
-        // http.append(" -H Authorization: Bearer {" + accessToken + "}");
-        HttpURLConnection connection = null;
-        StringBuilder jsonResults = new StringBuilder();
 
+        Map<String, String> header = new HashMap<>();
+        header.put("Authorization", "Bearer " + accessToken);
+
+        SpotifyTrackList trackList = RequestController.getRequest(http.toString(), SpotifyTrackList.class, header);
+        return trackList;
+
+       /*
         try {
             URL url = new URL(http.toString());
             connection = (HttpURLConnection) url.openConnection();
@@ -80,10 +88,10 @@ public class SpotifyController {
         } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
+        */
     }
 
     public static void main(String[] args){
-        //searchitem("Hello,Adele");
         searchTrack("Biliyorum", "track");
     }
 }
