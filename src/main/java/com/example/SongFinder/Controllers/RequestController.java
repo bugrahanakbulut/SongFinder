@@ -42,10 +42,9 @@ public class RequestController {
                 jsonResults.append(buffer, 0, read);
             }
 
-            JSONObject jsonObject = new JSONObject(jsonResults.toString());
-            ObjectMapper mapper = new ObjectMapper();
-            newObj = (T) mapper.readValue(jsonObject.toString(), expectedClass);
+            newObj = jsonDeserializer(jsonResults.toString(), expectedClass);
 
+            // System.out.println("newObj.toString() : " + newObj.toString() + " " +expectedClass.toString());
             // System.out.println(newObj.toString());
 
             /*
@@ -85,6 +84,14 @@ public class RequestController {
         } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
+        return newObj;
+    }
+
+    public static <T> T jsonDeserializer(String jsonResults, Class expectedClass) throws JSONException, IOException {
+        JSONObject jsonObject = new JSONObject(jsonResults.toString());
+        ObjectMapper mapper = new ObjectMapper();
+        // System.out.println(jsonObject.toString());
+        T newObj = (T) mapper.readValue(jsonObject.toString(), expectedClass);
         return newObj;
     }
 

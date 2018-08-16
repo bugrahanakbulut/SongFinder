@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Map;
 
 public class SpotifyController {
-    private static final String accessToken = "BQB47kA6IvLvS0bHX54-VI9nxqwtupB2h8s47oDha6KZSNjHOrlZ3ryptQ9XqAzn5f-juAuc0uFDct8Xzm-bM-v98fDrWHlObqemRPfStephOWTaCUVbFmbtk7FGJGjCB6L0oP7QBK_6zxfMaIWHPk78ZkskuwLnfjCL-TmT4d4OS-AVz0dFn3LGWBfqYzTerBGIq0RmG0i2T1m_yzRCcFJDBXiwdNUMT-pzgs0BqmniXEFrI7RVDWsXH_u_FJoQnNHaWlQD08jxD4VDqYCdaw" ;
+    private static final String accessToken = "BQCWIcgcS3PB7esPTFGCl3PFPzDmDj7L2BnFhnZgeh2-Y3EExeuHOfSTM2uafb0xgDVdVqqAfZ-ktavRjdTU8m4ibVHGr5PO-GAExdPe1ZYRA9NVxNpcA3ZsFOD8p85Y2-JcfRE97ivfNT417bAmoA49UvY40IYjH4SahOCem5BtbINoxxIpTpN-rE-ve-gOEYLKhQUHp_lO5PWBwAMtrUH4tAH4zzfd4HoY0rUmIiiNnMgMW9I2VM5XgeXpcMQoHKZ3UZKcqui56VDMnBWb4w" ;
     private static final String type = ModelObjectType.TRACK.getType();
 
     private static final SpotifyApi spotifyApi = new SpotifyApi.Builder().
@@ -47,6 +47,7 @@ public class SpotifyController {
     public static SpotifyTrackList searchTrack(String key, String type){
         String query = key.replace(" ", "+");
         query = query.toLowerCase();
+
         StringBuilder http = new StringBuilder();
         http.append("https://api.spotify.com/v1/search?");
         http.append("q=" + query);
@@ -56,8 +57,9 @@ public class SpotifyController {
 
         Map<String, String> header = new HashMap<>();
         header.put("Authorization", "Bearer " + accessToken);
-
-        return RequestController.getRequest(http.toString(), SpotifyTrackList.class, header);
+        // System.out.println(http.toString());
+        SpotifyTrackList trackList = RequestController.getRequest(http.toString(), SpotifyTrackList.class, header);
+        return trackList;
 
        /*
         try {

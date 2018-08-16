@@ -2,6 +2,7 @@ package com.example.SongFinder.Entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonRootName;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -36,8 +37,13 @@ public class SpotifyTrackList {
                 // WATCH OUT IT OVERWRITES
                 track.setArtistName((String) artist.get("name"));
             }
-            System.out.println(track.toString());
+            this.getTrackList().add(track);
+            //System.out.println(track.toString());
         }
     }
 
+    @Override
+    public String toString() {
+        return "SIZE : " + this.getTrackList().size();
+    }
 }

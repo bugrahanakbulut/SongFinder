@@ -10,6 +10,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * TODO TEST : JSON DESERIALIZER
+ *      TEST : APP
+ * TODO WEB INTERFACE
+ */
+
 @RestController
 @RequestMapping(value = "/track")
 public class TrackController {
@@ -66,13 +72,17 @@ public class TrackController {
 
     public ArrayList<Track> searchTracks(TrackList trackList2Search){
         ArrayList<Track> founded = new ArrayList<>();
+        // System.out.println("trackList2Search.getTrackList().size() : " + trackList2Search.getTrackList().size());
         for (Track searchItem : trackList2Search.getTrackList()){
+            // System.out.println(searchItem.toString());
             SpotifyTrackList searchResult = SpotifyController.searchTrack(searchItem.getTrackName(), "track");
+            // System.out.println("searchResult.getTrackList().size()" + searchResult.getTrackList().size());
             for(Track result : searchResult.getTrackList()){
-                if(result.getArtistName().equals(searchItem.getArtistName())
-                        && result.getTrackName().equals(searchItem.getTrackName())){
+                if(result.getArtistName().toLowerCase().equals(searchItem.getArtistName().toLowerCase())
+                        && result.getTrackName().toLowerCase().equals(searchItem.getTrackName().toLowerCase())){
                     founded.add(result);
-                    searchResult.getTrackList().remove(result);
+                    // searchResult.getTrackList().remove(result);
+                    break;
                 }
             }
 

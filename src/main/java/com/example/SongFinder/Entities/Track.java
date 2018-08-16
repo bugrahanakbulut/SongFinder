@@ -81,9 +81,6 @@ public class Track {
         trackToString.append(this.getArtistName());
         trackToString.append("\n");
 
-        trackToString.append("RANK: ");
-        trackToString.append(this.getRank());
-
         return trackToString.toString();
     }
 }
