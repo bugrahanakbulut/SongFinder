@@ -3,6 +3,8 @@ package com.example.SongFinder.Controllers;
 import com.example.SongFinder.Entities.SpotifyTrackList;
 import com.example.SongFinder.Entities.Track;
 import com.example.SongFinder.Entities.TrackList;
+import com.example.SongFinder.Exceptions.BadRequestException;
+import com.example.SongFinder.Exceptions.UnauthorizedRequestException;
 import com.example.SongFinder.Repositories.TrackRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -35,6 +37,10 @@ public class TrackController {
     private ArrayList<Track> trackList;
     private TrackRepository trackRepo;
 
+    public TrackController(){
+        this.trackList = new ArrayList<>();
+    }
+
     @Autowired
     public TrackController(TrackRepository trackRepo){
         this.trackRepo = trackRepo;
@@ -61,13 +67,40 @@ public class TrackController {
         requesBase += "&limit=10";
         requesBase += "&format=json";
         // System.out.println(requesBase);
-        TrackList popularTracks = RequestController.getRequest(requesBase, TrackList.class, null);
-        for (Track t : popularTracks.getTrackList()) {
-            t.setCountry(requestBody.getCountry());
-            this.trackList.add(t);
+        try {
+            TrackList popularTracks = RequestController.getRequest(requesBase, TrackList.class, null);
+            for (Track t : popularTracks.getTrackList()) {
+                t.setCountry(requestBody.getCountry());
+                this.trackList.add(t);
+            }
+            ArrayList<Track> results = searchTracks(popularTracks);
+            trackRepo.save(results);
+        } catch (BadRequestException | UnauthorizedRequestException e){
+            e.printStackTrace();
         }
-        ArrayList<Track> results = searchTracks(popularTracks);
-        trackRepo.save(results);
+    }
+
+
+    // FOR UNIT TESTING
+    public ArrayList<Track> trackFinder(String country){
+        String requesBase = "http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=";
+        requesBase += country;
+        requesBase += "&api_key=56ad71507512a288c28c1fffb1be0a19";
+        requesBase += "&limit=10";
+        requesBase += "&format=json";
+        try {
+            TrackList popularTracks = RequestController.getRequest(requesBase, TrackList.class, null);
+            for (Track t : popularTracks.getTrackList()) {
+                t.setCountry(country);
+                this.trackList.add(t);
+                System.out.println(t.toString());
+            }
+            ArrayList<Track> results = searchTracks(popularTracks);
+            return results;
+        } catch (BadRequestException | UnauthorizedRequestException e){
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public ArrayList<Track> searchTracks(TrackList trackList2Search){
@@ -77,15 +110,16 @@ public class TrackController {
             // System.out.println(searchItem.toString());
             SpotifyTrackList searchResult = SpotifyController.searchTrack(searchItem.getTrackName(), "track");
             // System.out.println("searchResult.getTrackList().size()" + searchResult.getTrackList().size());
-            for(Track result : searchResult.getTrackList()){
-                if(result.getArtistName().toLowerCase().equals(searchItem.getArtistName().toLowerCase())
-                        && result.getTrackName().toLowerCase().equals(searchItem.getTrackName().toLowerCase())){
-                    founded.add(result);
-                    // searchResult.getTrackList().remove(result);
-                    break;
+            if(searchResult != null){
+                for(Track result : searchResult.getTrackList()){
+                    if(result.getArtistName().toLowerCase().equals(searchItem.getArtistName().toLowerCase())
+                            && result.getTrackName().toLowerCase().equals(searchItem.getTrackName().toLowerCase())){
+                        founded.add(result);
+                        // searchResult.getTrackList().remove(result);
+                        break;
+                    }
                 }
             }
-
         }
         return founded;
     }

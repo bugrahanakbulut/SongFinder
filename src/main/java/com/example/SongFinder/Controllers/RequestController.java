@@ -1,5 +1,7 @@
 package com.example.SongFinder.Controllers;
 
+import com.example.SongFinder.Exceptions.BadRequestException;
+import com.example.SongFinder.Exceptions.UnauthorizedRequestException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -19,8 +21,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+
 public class RequestController {
-    public static <T> T getRequest(String http, Class expectedClass, Map<String, String> header){
+    public static <T> T getRequest(String http, Class expectedClass, Map<String, String> header) throws UnauthorizedRequestException,
+                                                                                                        BadRequestException{
         HttpURLConnection connection = null;
         StringBuilder jsonResults = new StringBuilder();
         T newObj = null;
@@ -33,6 +37,17 @@ public class RequestController {
                     connection.setRequestProperty(entry.getKey(), entry.getValue());
                 }
             }
+
+
+            // http response codes
+            // System.out.println(connection.getHeaderField(null));
+
+            if(connection.getHeaderField(null).equals("HTTP/1.1 200 OK")){
+                ;
+            } else if(connection.getHeaderField(null).equals("HTTP/1.1 401 Unauthorized"))
+                throw new UnauthorizedRequestException("Error Code : 401, UnauthorizedRequest Check access token.");
+            else if(connection.getHeaderField(null).equals("HTTP/1.1 400 Bad Request"))
+                throw new BadRequestException("Error Code : 400, Bad Request");
 
             InputStreamReader in = new InputStreamReader(connection.getInputStream());
 

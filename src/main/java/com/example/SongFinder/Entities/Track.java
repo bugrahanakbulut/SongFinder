@@ -79,7 +79,6 @@ public class Track {
 
         trackToString.append("ARTIST:");
         trackToString.append(this.getArtistName());
-        trackToString.append("\n");
 
         return trackToString.toString();
     }
