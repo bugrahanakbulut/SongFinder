@@ -18,6 +18,7 @@ import java.util.List;
  * TODO WEB INTERFACE
  */
 
+@CrossOrigin(origins = "http://localhost:8080/track")
 @RestController
 @RequestMapping(value = "/track")
 public class TrackController {
@@ -60,7 +61,7 @@ public class TrackController {
     }
 
     @RequestMapping(method = RequestMethod.PUT)
-    public void trackFinder(@RequestBody FindPopularSongsRequest requestBody){
+    public List<Track> trackFinder(@RequestBody FindPopularSongsRequest requestBody){
         String requesBase = "http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=";
         requesBase += requestBody.getCountry();
         requesBase += "&api_key=56ad71507512a288c28c1fffb1be0a19";
@@ -74,10 +75,17 @@ public class TrackController {
                 this.trackList.add(t);
             }
             ArrayList<Track> results = searchTracks(popularTracks);
-            trackRepo.save(results);
+            for(Track t : results){
+                List<Track> duplicate = trackRepo.findByIdSpotify(t.getIdSpotify());
+                if(duplicate.size() == 0)
+                    trackRepo.save(t);
+            }
+            // trackRepo.save(results);
         } catch (BadRequestException | UnauthorizedRequestException e){
             e.printStackTrace();
         }
+
+        return trackRepo.findByCountry(requestBody.getCountry());
     }
 
 
@@ -114,6 +122,9 @@ public class TrackController {
                 for(Track result : searchResult.getTrackList()){
                     if(result.getArtistName().toLowerCase().equals(searchItem.getArtistName().toLowerCase())
                             && result.getTrackName().toLowerCase().equals(searchItem.getTrackName().toLowerCase())){
+
+                        result.setRank(searchItem.getRank());
+                        result.setCountry(searchItem.getCountry());
                         founded.add(result);
                         // searchResult.getTrackList().remove(result);
                         break;

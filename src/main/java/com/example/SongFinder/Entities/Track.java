@@ -23,7 +23,7 @@ public class Track {
 
 
     public long getDbId() {
-        return dbId;
+        return this.dbId;
     }
 
     public void setDbId(long dbId) {
@@ -31,7 +31,7 @@ public class Track {
     }
 
     public String getIdSpotify() {
-        return idSpotify;
+        return this.idSpotify;
     }
 
     public void setIdSpotify(String idSpotify) {
@@ -39,7 +39,7 @@ public class Track {
     }
 
     public String getArtistName() {
-        return  artistName;
+        return  this.artistName;
     }
 
     public void setArtistName(String artistName) {
@@ -47,7 +47,7 @@ public class Track {
     }
 
     public String getTrackName() {
-        return trackName;
+        return this.trackName;
     }
 
     public void setTrackName(String name) {
@@ -55,7 +55,7 @@ public class Track {
     }
 
     public String getCountry() {
-        return country;
+        return this.country;
     }
 
     public void setCountry(String country) {
@@ -63,7 +63,7 @@ public class Track {
     }
 
     public int getRank() {
-        return rank;
+        return this.rank;
     }
 
     public void setRank(int rank) {

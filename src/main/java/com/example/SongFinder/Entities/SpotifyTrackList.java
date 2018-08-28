@@ -31,7 +31,7 @@ public class SpotifyTrackList {
         for(Map map : mapTrackList){
             Track track = new Track();
             track.setTrackName((String) map.get("name"));
-
+            track.setIdSpotify((String) map.get("id"));
             ArrayList<LinkedHashMap> artists = (ArrayList<LinkedHashMap>) map.get("artists");
             for (LinkedHashMap artist : artists){
                 // WATCH OUT IT OVERWRITES

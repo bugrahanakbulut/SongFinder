@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Map;
 
 public class SpotifyController {
-    private static final String accessToken = "Bearer BQA5zFowfdaSlAPIOLPqAVmTBWBe6fHA5BZJbszQeQ3RUPlAcTk3hR_2Tkj06K-2ny6U1494vdxvSIV1BRZDFBDhnaCEHpeik73w7PKXxsljBudQYB-g16MoZ751t3DM07b0FcxT3KZXRHSWsv4bbQp4EQMvB2R3IYfgzWeHNTAlKPHT14LIWkuoVCjpX6ZzfcHKTniAnC5t3WwPfmsO9_gCgN92-KJbUA65utGFdHQYy-jxflIPmgaf5y0Y5YsijXQ4U6Sk3-aGI1MyIsMPFw" ;
+    private static final String accessToken = "Bearer BQCJFkrMHevEtruzziNoa4LZDyIEhgdAhsRW4jPOLQwiB6oLStTtFb_aFbLPIq-hVi1QeXabz2S1uFdKsLK8qPiy2hrUsKdB8G56B6l7Mn4YUA0itB2OUOda0mVgKJ7x04okm4dXmtp7vi9kXkhjJVvgAcCLIrYiJtlf_fsFjceNi14onInp20-5QZzItI5x5jxSGzuH5lYGy6_tN0OKRoJ_DVT3A-cj6TVoWscJE1kMnHTha61vJPfzviJ1i1FIb0I8tZRSNVy_gcQ3fk6i6A" ;
     private static final String type = ModelObjectType.TRACK.getType();
 
     private static final SpotifyApi spotifyApi = new SpotifyApi.Builder().
