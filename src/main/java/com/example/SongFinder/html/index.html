@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="exampleApp">
 <head>
+    <link rel="stylesheet" href="style.css">
     <title>Song Finder</title>
 </head>
 
 <body ng-controller="MainController">
-    <button ng-click="login()">Login with Spotify</button>
-    <input type = "text" ng-model = "country" placeholder = "Country">
-    <button ng-click="getTopTracks(country)">Get Top Tracks of {{country}}</button>
-
+    <button id="loginButton" class="Button" ng-click="login()">Login with Spotify</button>
+    <div id="userStatus" class="Text" type="text" contenteditable="true">{{editmode ? 'Online' : 'Offline'}}</div>
+    <input id="countryText" class="EditText" type = "text" ng-model = "country" placeholder = "Country">
+    <button id="searchButton" class="Button" ng-click="getTopTracks(country)">Get Top Tracks of {{country}}</button>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
     <script src="angular-spotify.js"></script>

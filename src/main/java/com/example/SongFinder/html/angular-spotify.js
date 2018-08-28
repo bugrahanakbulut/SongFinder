@@ -92,7 +92,8 @@
                             })
 
                                 .catch(function (err) {
-                                    console.log(err)
+                                    console.log(err);
+                                    alert("Error Occured!");
                                     throw err;
                                 });
 

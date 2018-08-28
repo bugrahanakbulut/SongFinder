@@ -1,0 +1,27 @@
+
+#loginButton{
+    position: fixed;
+    top: 25px;
+    left: 25px;
+}
+
+#userStatus{
+    position: fixed;
+    color: black;
+    top: 25px;
+    left: 300px;
+}
+
+#countryText{
+    position: fixed;
+    top: 75px;
+    left: 25px;
+}
+
+#searchButton{
+    position: fixed;
+    top: 75px;
+    left: 300px;
+
+}
+

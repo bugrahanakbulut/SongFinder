@@ -18,7 +18,7 @@ import java.util.List;
  * TODO WEB INTERFACE
  */
 
-@CrossOrigin(origins = "http://localhost:8080/track")
+// @CrossOrigin(origins = "http://localhost:8080/track")
 @RestController
 @RequestMapping(value = "/track")
 public class TrackController {
