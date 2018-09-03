@@ -126,7 +126,7 @@
                         let loaderStyle = "\n" +
                             "#loader {\n" +
                             "    position: fixed;\n" +
-                            "    top: 500px;\n" +
+                            "    top: 501px;\n" +
                             "    left: 500px;" +
                             "    border: 16px solid #f3f3f3; /* Light grey */\n" +
                             "    border-top: 16px solid #3498db; /* Blue */\n" +
