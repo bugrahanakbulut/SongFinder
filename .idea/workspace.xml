@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="094c4e14-3a70-478e-b871-0509a2714f78" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,16 +16,16 @@
     <session id="1332032150">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="4" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.14" value="4" />
+          <entry key="project.open.time.14" value="5" />
           <entry key="project.open.time.19" value="2" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -34,7 +35,7 @@
           <entry key="html" value="30" />
           <entry key="java" value="113" />
           <entry key="js" value="38" />
-          <entry key="xml" value="2" />
+          <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -44,7 +45,7 @@
           <entry key="HTML" value="30" />
           <entry key="JAVA" value="113" />
           <entry key="JavaScript" value="38" />
-          <entry key="XML" value="2" />
+          <entry key="XML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -54,6 +55,7 @@
           <entry key="html" value="3493" />
           <entry key="java" value="13750" />
           <entry key="js" value="6143" />
+          <entry key="txt" value="2" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
@@ -63,7 +65,7 @@
           <entry key="HTML" value="3425" />
           <entry key="JAVA" value="13750" />
           <entry key="JavaScript" value="6211" />
-          <entry key="PLAIN_TEXT" value="83" />
+          <entry key="PLAIN_TEXT" value="85" />
           <entry key="XML" value="6" />
         </counts>
       </usages-collector>
@@ -92,11 +94,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/angular-spotify.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="156" column="71" lean-forward="true" selection-start-line="156" selection-start-column="71" selection-end-line="156" selection-end-column="71" />
+            <state relative-caret-position="2652">
+              <caret line="156" column="71" selection-start-line="156" selection-start-column="71" selection-end-line="156" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -193,8 +204,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-32" />
-    <option name="y" value="-29" />
+    <option name="x" value="-21" />
+    <option name="y" value="26" />
     <option name="width" value="1300" />
     <option name="height" value="944" />
   </component>
@@ -230,68 +241,6 @@
               <item name="SongFinder" type="b2602c69:ProjectViewProjectNode" />
               <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SongFinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SongFinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SongFinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SongFinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SongFinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SongFinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
-              <item name="Entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SongFinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SongFinder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
-              <item name="Repositories" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -320,7 +269,7 @@
     <property name="SearchEverywhereHistoryKey" value="trackR&#9;PSI&#9;JAVA://com.example.SongFinder.Repositories.TrackRepository&#10;request&#9;FILE&#9;jar://C:/Users/bugrahan.akbulut/.m2/repository/org/springframework/spring-web/4.3.18.RELEASE/spring-web-4.3.18.RELEASE.jar!/org/springframework/web/context/request/RequestAttributes.class&#10;search&#9;FILE&#9;jar://C:/Users/bugrahan.akbulut/.m2/repository/se/michaelthelin/spotify/spotify-web-api-java/2.0.4/spotify-web-api-java-2.0.4.jar!/com/wrapper/spotify/requests/data/search/SearchItemRequest.class&#10;Repository&#9;FILE&#9;jar://C:/Program Files (x86)/Java/jdk1.7.0_79/jre/lib/jfr.jar!/oracle/jrockit/jfr/Repository.class&#10;Repos&#9;FILE&#9;file://C:/Users/bugrahan.akbulut/IdeaProjects/SongFinder/src/main/java/com/example/SongFinder/Repositories" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535963776249" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535964176264" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../demo" />
@@ -487,8 +436,17 @@
       <workItem from="1535521617732" duration="18352000" />
       <workItem from="1535693629462" duration="19857000" />
       <workItem from="1535953230031" duration="10180000" />
-      <workItem from="1535963805712" duration="93000" />
+      <workItem from="1535963805712" duration="416000" />
+      <workItem from="1535964314342" duration="55000" />
     </task>
+    <task id="LOCAL-00001" summary="//">
+      <created>1535963950191</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1535963950191</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -524,7 +482,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154864000" />
+    <option name="totallyTimeSpent" value="155242000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -540,7 +498,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Persistence" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49916247" visible="true" weight="0.22168285" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49916247" visible="true" weight="0.2249191" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
@@ -561,7 +519,7 @@
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3290993" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" weight="0.3290993" />
+      <window_info anchor="bottom" id="Version Control" order="13" visible="true" weight="0.3290993" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -577,6 +535,32 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -585,6 +569,8 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/web" />
     </ignored-roots>
+    <MESSAGE value="//" />
+    <option name="LAST_COMMIT_MESSAGE" value="//" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -743,9 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -773,15 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
           <caret line="60" column="44" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1572#1573#0" expanded="true" />
-            <element signature="e#1603#1604#0" expanded="true" />
-            <element signature="e#1651#1652#0" expanded="true" />
-            <element signature="e#1691#1692#0" expanded="true" />
-            <element signature="e#1773#1774#0" expanded="true" />
-            <element signature="e#1813#1814#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -789,12 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#799#800#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -809,10 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -851,6 +815,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7497" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -867,8 +836,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/angular-spotify.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="156" column="71" lean-forward="true" selection-start-line="156" selection-start-column="71" selection-end-line="156" selection-end-column="71" />
+        <state relative-caret-position="2652">
+          <caret line="156" column="71" selection-start-line="156" selection-start-column="71" selection-end-line="156" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
         </state>
       </provider>
     </entry>
