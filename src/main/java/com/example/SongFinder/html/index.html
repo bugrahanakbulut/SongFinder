@@ -15,6 +15,7 @@
     <input id="countryText" type="text" ng-model="country" placeholder="Country">
     <button id="searchButton" class="Button" ng-click="getTopTracks(country)">Get Top Tracks of {{country}}</button>
     <div id="dsk"><img src="world-map.gif" alt="world map" border="0" vspace="8" usemap="#Map" class="image"></div>
+
     <map name="Map">
         <area shape="poly" coords="333,288,149,277,154,347,296,378" alt="United States of America" ng-click="getTopTracks(usa)">
         <area shape="poly" coords="393,289,320,3,228,3,94,132,94,273" alt="Canada" ng-click="getTopTracks(canada)">
@@ -68,7 +69,31 @@
         <area shape="rect" coords="793,320,860,331" alt="tajikistan" ng-click="getTopTracks(tajikistan)">
         <area shape="poly" coords="790,315,757,298,750,305,786,325" alt="uzbekistan" ng-click="getTopTracks(uzbekistan)">
         <area shape="poly" coords="767,338,780,329,750,310,743,324" alt="turkmenistan" ng-click="getTopTracks(turkmenistan)">
-        <area shape="rect" coords="717,310,741,322"  alt="azerbaijan">
+        <area shape="rect" coords="717,310,741,322"  alt="azerbaijan" ng-click="getTopTracks(azerbaijan)">
+        <area shape="poly" coords="766,356,761,337,708,329,721,356" alt="iran" ng-click="getTopTracks(iran)">
+        <area shape="poly" coords="770,362,797,340,791,331,765,343" alt="afghanistan" ng-click="afghanistan">
+        <area shape="poly" coords="770,366,807,335,818,342,786,378" alt="pakistan" ng-click="getTopTracks(pakistan)">
+        <area shape="poly" coords="810,353,796,390,817,434,853,387" alt="india" ng-click="getTopTracks(india)">
+        <area shape="poly" coords="854,373,860,353,840,343,830,365" alt="nepal" ng-click="getTopTracks(nepal)">
+        <area shape="poly" coords="918,405,959,407,957,414,912,435,921,419" alt="vietnam" ng-click="getTopTracks(vietnam)">
+        <area shape="poly" coords="858,417,894,401,911,415,865,425" alt="thailand" ng-click="getTopTracks(thailand)">
+        <area shape="rect" coords="979,312,1021,326" alt="north_korea" ng-click="getTopTracks(north_korea)">
+        <area shape="rect" coords="970,328,1013,339" alt="south_korea" ng-click="getTopTracks(south_korea)">
+        <area shape="poly" coords="994,345,1017,337,1033,295,1061,333,996,356" alt="japan" ng-click="getTopTracks(japan)">
+        <area shape="rect" coords="961,378,1002,392" alt="taiwan" ng-click="getTopTracks(taiwan)">
+        <area shape="rect" coords="896,444,944,459" alt="malaysia" ng-click="getTopTracks(malaysia)">
+        <area shape="rect" coords="938,503,1079,625" alt="australia" ng-click="getTopTracks(australia)">
+        <area shape="rect" coords="1108,581,1171,653" alt="new zealand" ng-click="getTopTracks(new_zealand)">
+        <area shape="rect" coords="684,333,711,343" alt="syria" ng-click="getTopTracks(syria)">
+        <area shape="rect" coords="694,343,717,358" alt="iraq" ng-click="getTopTracks(iraq)">
+        <area shape="rect" coords="638,338,683,349" alt="lebanon" ng-click="getTopTracks(lebanon)">
+        <area shape="rect" coords="717,358,760,369" alt="kuwait" ng-click="getTopTracks(kuwait)">
+        <area shape="rect" coords="689,374,737,399" alt="saudi_arabia" ng-click="getTopTracks(saudi_arabia)">
+        <area shape="rect" coords="477,162,521,201" alt="iceland" ng-click="getTopTracks(iceland)">
+        <area shape="poly" coords="562,241,585,242,581,267" alt="netherlands" ng-click="getTopTracks(netherlands)">
+        <area shape="rect" coords="590,334,623,347" alt="tunisia" ng-click="getTopTracks(tunisia)">
+        <area shape="poly" coords="643,365,668,369,680,349,646,355" alt="israel" ng-click="getTopTracks(israel)">
+        <area shape="rect" coords="646,370,680,390" alt="egypt" ng-click="getTopTracks(egypt)">
     </map>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>

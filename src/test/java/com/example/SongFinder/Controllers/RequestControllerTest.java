@@ -47,13 +47,13 @@ public class RequestControllerTest {
     }
 
     @Test
-    public void jsonDeserializer() throws IOException, JSONException {
-        String json = "{\"name\":\"qwerty\"," +
-                      "\"surname\":\"qwertyasdfg\"," +
-                      "\"insurance\":{" +
-                        "\"type\" : \"sssss\"} }";
-        Person asd = RequestController.jsonDeserializer(json, Person.class);
-        System.out.println(asd.toString());
+        public void jsonDeserializer() throws IOException, JSONException {
+            String json = "{\"name\":\"qwerty\"," +
+                    "\"surname\":\"qwertyasdfg\"," +
+                    "\"insurance\":{" +
+                    "\"type\" : \"sssss\"} }";
+            Person asd = RequestController.jsonDeserializer(json, Person.class);
+            System.out.println(asd.toString());
     }
 
     @Test

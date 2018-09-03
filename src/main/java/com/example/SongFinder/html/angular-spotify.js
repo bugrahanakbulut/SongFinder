@@ -55,7 +55,6 @@
             settings.apiBase = 'https://api.spotify.com/v1';
 
             this.$get = ['$q', '$http', '$window', function ($q, $http, $window) {
-
                 function NgSpotify () {
                     this.clientId = settings.clientId;
                     this.redirectUri = settings.redirectUri;
@@ -124,11 +123,11 @@
                     },
 
                     getTopTracks: function (country, autKey){
-
-                        let loaderStyle = "#loader {\n" +
+                        let loaderStyle = "\n" +
+                            "#loader {\n" +
                             "    position: fixed;\n" +
-                            "    top: 1000px;\n" +
-                            "    left: 100px;" +
+                            "    top: 500px;\n" +
+                            "    left: 500px;" +
                             "    border: 16px solid #f3f3f3; /* Light grey */\n" +
                             "    border-top: 16px solid #3498db; /* Blue */\n" +
                             "    border-radius: 50%;\n" +
@@ -145,8 +144,6 @@
                         let loaderHTML = "<div id=\"loader\"></div>";
                         document.getElementById("body").innerHTML = document.getElementById("body").innerHTML.concat(loaderHTML);21
                         document.getElementById("style").innerHTML = loaderStyle;
-
-
 
                         let userID = this.getUserId(autKey);
                         let playListID = this.createPlayList(userID, autKey, country);

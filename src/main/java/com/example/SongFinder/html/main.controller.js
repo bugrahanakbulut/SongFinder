@@ -74,9 +74,31 @@ let app = angular
                 $scope.tajikistan = "tajikistan";
                 $scope.uzbekistan = "uzbekistan";
                 $scope.turkmenistan = "turkmenistan";
-
-
-
+                $scope.azerbaijan = "azerbaijan";
+                $scope.iran = "iran";
+                $scope.afghanistan = "afghanistan";
+                $scope.pakistan = "pakistan";
+                $scope.india = "india";
+                $scope.nepal = "nepal";
+                $scope.vietnam = "vietnam";
+                $scope.thailand = "thailand";
+                $scope.north_korea = "north korea";
+                $scope.south_korea = "south korea";
+                $scope.japan = "japan";
+                $scope.taiwan = "taiwan";
+                $scope.malaysia = "malaysia";
+                $scope.australia = "australia";
+                $scope.new_zealand = "new zealand";
+                $scope.syria = "syria";
+                $scope.iraq = "iraq";
+                $scope.lebanon = "lebanon";
+                $scope.kuwait = "kuwait";
+                $scope.saudi_arabia = "saudi arabia";
+                $scope.iceland = "iceland";
+                $scope.netherlands = "netherlands";
+                $scope.tunisia = "tunisia";
+                $scope.israel = "israel";
+                $scope.egypt = "egypt";
 
                 $scope.accesssToken = data;
                 $scope.editmode = true;
