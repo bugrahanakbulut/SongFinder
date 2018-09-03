@@ -19,8 +19,16 @@ public class Track {
     private String artistName;
     private String trackName;
     private String country;
+    private String spotifyUri;
     private int rank;
 
+    public String getSpotifyUri() {
+        return spotifyUri;
+    }
+
+    public void setSpotifyUri(String spotifyUri) {
+        this.spotifyUri = spotifyUri;
+    }
 
     public long getDbId() {
         return this.dbId;

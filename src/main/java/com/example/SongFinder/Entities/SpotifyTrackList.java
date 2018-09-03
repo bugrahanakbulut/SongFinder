@@ -32,6 +32,7 @@ public class SpotifyTrackList {
             Track track = new Track();
             track.setTrackName((String) map.get("name"));
             track.setIdSpotify((String) map.get("id"));
+            track.setSpotifyUri((String) map.get("uri"));
             ArrayList<LinkedHashMap> artists = (ArrayList<LinkedHashMap>) map.get("artists");
             for (LinkedHashMap artist : artists){
                 // WATCH OUT IT OVERWRITES

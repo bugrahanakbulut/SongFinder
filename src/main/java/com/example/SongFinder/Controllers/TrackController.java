@@ -18,13 +18,22 @@ import java.util.List;
  * TODO WEB INTERFACE
  */
 
-// @CrossOrigin(origins = "http://localhost:8080/track")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping(value = "/track")
 public class TrackController {
 
     public static class FindPopularSongsRequest {
         private String country;
+        private String autKey;
+
+        public String getAutKey(){
+            return autKey;
+        }
+
+        public void setAutKey(String autKey){
+            this.autKey = autKey;
+        }
 
         public String getCountry() {
             return country;
@@ -74,13 +83,12 @@ public class TrackController {
                 t.setCountry(requestBody.getCountry());
                 this.trackList.add(t);
             }
-            ArrayList<Track> results = searchTracks(popularTracks);
+            ArrayList<Track> results = searchTracks(popularTracks, requestBody.getAutKey());
             for(Track t : results){
                 List<Track> duplicate = trackRepo.findByIdSpotify(t.getIdSpotify());
                 if(duplicate.size() == 0)
                     trackRepo.save(t);
             }
-            // trackRepo.save(results);
         } catch (BadRequestException | UnauthorizedRequestException e){
             e.printStackTrace();
         }
@@ -90,7 +98,7 @@ public class TrackController {
 
 
     // FOR UNIT TESTING
-    public ArrayList<Track> trackFinder(String country){
+    public ArrayList<Track> trackFinder(String country, String autToken){
         String requesBase = "http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=";
         requesBase += country;
         requesBase += "&api_key=56ad71507512a288c28c1fffb1be0a19";
@@ -103,7 +111,7 @@ public class TrackController {
                 this.trackList.add(t);
                 System.out.println(t.toString());
             }
-            ArrayList<Track> results = searchTracks(popularTracks);
+            ArrayList<Track> results = searchTracks(popularTracks, autToken);
             return results;
         } catch (BadRequestException | UnauthorizedRequestException e){
             e.printStackTrace();
@@ -111,12 +119,13 @@ public class TrackController {
         }
     }
 
-    public ArrayList<Track> searchTracks(TrackList trackList2Search){
+    public ArrayList<Track> searchTracks(TrackList trackList2Search, String autToken){
         ArrayList<Track> founded = new ArrayList<>();
         // System.out.println("trackList2Search.getTrackList().size() : " + trackList2Search.getTrackList().size());
         for (Track searchItem : trackList2Search.getTrackList()){
             // System.out.println(searchItem.toString());
-            SpotifyTrackList searchResult = SpotifyController.searchTrack(searchItem.getTrackName(), "track");
+            SpotifyController controllerS = new SpotifyController(autToken);
+            SpotifyTrackList searchResult = controllerS.searchTrack(searchItem.getTrackName(), "track");
             // System.out.println("searchResult.getTrackList().size()" + searchResult.getTrackList().size());
             if(searchResult != null){
                 for(Track result : searchResult.getTrackList()){

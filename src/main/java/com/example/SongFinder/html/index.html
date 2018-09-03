@@ -1,15 +1,75 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="exampleApp">
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <title>Song Finder</title>
 </head>
 
-<body ng-controller="MainController">
+<style id="style"></style>
+
+
+<body id="body" ng-controller="MainController">
     <button id="loginButton" class="Button" ng-click="login()">Login with Spotify</button>
-    <div id="userStatus" class="Text" type="text" contenteditable="true">{{editmode ? 'Online' : 'Offline'}}</div>
-    <input id="countryText" class="EditText" type = "text" ng-model = "country" placeholder = "Country">
+    <div id="userStatus" class="Text" contenteditable="true">{{editmode ? 'Online' : 'Offline'}}</div>
+    <input id="countryText" type="text" ng-model="country" placeholder="Country">
     <button id="searchButton" class="Button" ng-click="getTopTracks(country)">Get Top Tracks of {{country}}</button>
+    <div id="dsk"><img src="world-map.gif" alt="world map" border="0" vspace="8" usemap="#Map" class="image"></div>
+    <map name="Map">
+        <area shape="poly" coords="333,288,149,277,154,347,296,378" alt="United States of America" ng-click="getTopTracks(usa)">
+        <area shape="poly" coords="393,289,320,3,228,3,94,132,94,273" alt="Canada" ng-click="getTopTracks(canada)">
+        <area shape="poly" coords="169,352,281,378,253,416,178,385" alt="Mexico" ng-click="getTopTracks(mexico)">
+        <area shape="poly" coords="256,423,269,408,264,405,253,417,207,412,210,421" alt="Guatemala" ng-click="getTopTracks(guatemala)">
+        <area shape="poly" coords="270,421,315,407,274,406,262,416" alt="Honduras" ng-click="getTopTracks(honduras)">
+        <area shape="poly" coords="275,428,327,421,288,416,271,422" alt="nicaragua" ng-click="getTopTracks(nicaragua)">
+        <area shape="poly" coords="283,436,288,428,230,427,228,438" alt="costa rica" ng-click="getTopTracks(costa_rica)">
+        <area shape="poly" coords="285,448,305,434,288,432,243,452" alt="panama" ng-click="getTopTracks(panama)">
+        <area shape="poly" coords="244,462,299,460,308,468,294,474" alt="ecuador" ng-click="getTopTracks(ecuador)">
+        <area shape="poly" coords="288,456,317,425,335,457,332,474" alt="colombia" ng-click="getTopTracks(colombia)">
+        <area shape="poly" coords="322,425,340,460,358,449,358,434" alt="venezuela" ng-click="getTopTracks(venezuela)">
+        <area shape="poly" coords="362,434,404,438,373,445,369,457,361,454" alt="guyana" ng-click="getTopTracks(guyana)">
+        <area shape="poly" coords="373,455,377,446,387,470,347,470,348,462,370,462" alt="suriname" ng-click="getTopTracks(suriname)">
+        <area shape="poly" coords="335,472,413,470,444,490,422,540,378,526,326,493" alt="brazil" ng-click="getTopTracks(brazil)">
+        <area shape="poly" coords="373,556,408,539,364,530,354,541" alt="paraguay" ng-click="getTopTracks(paraguay)">
+        <area shape="poly" coords="291,479,324,474,327,525,309,515" alt="peru" ng-click="getTopTracks(peru)">
+        <area shape="poly" coords="334,500,368,525,334,544" alt="bolivia" ng-click="getTopTracks(bolivia)">
+        <area shape="poly" coords="333,547,316,674,297,561,330,522" alt="chile" ng-click="getTopTracks(chile)">
+        <area shape="poly" coords="336,545,369,554,344,683,319,660" alt="argentina" ng-click="getTopTracks(argentina)">
+        <area shape="poly" coords="375,571,448,593,367,587" alt="uruguay" ng-click="getTopTracks(uruguay)">
+        <area shape="rect" coords="279,383,311,397" alt="cuba" ng-click="getTopTracks(cuba)">
+        <area shape="rect" coords="314,396,323,405" alt="haiti" ng-click="getTopTracks(haiti)">
+        <area shape="poly" coords="597,219,610,165,660,132,661,3,598,4,563,186,580,222" alt="norway" ng-click="getTopTracks(norway)">
+        <area shape="poly" coords="613,238,639,172,636,150,612,170,598,220" alt="sweden" ng-click="getTopTracks(sweden)">
+        <area shape="poly" coords="635,215,663,195,657,138,640,149" alt="finland" ng-click="getTopTracks(finland)">
+        <area shape="rect" coords="640,216,681,226" alt="estonia" ng-click="getTopTracks(estonia)">
+        <area shape="rect" coords="633,227,673,236" alt="latvia" ng-click="getTopTracks(latvia)">
+        <area shape="poly" coords="635,236,650,241,645,251,632,240" alt="lithuania" ng-click="getTopTracks(lithuania)">
+        <area shape="poly" coords="641,262,687,254,657,238,642,253" alt="belarus" ng-click="getTopTracks(belarus)">
+        <area shape="poly" coords="643,262,671,260,692,283,639,281" alt="ukraine" ng-click="getTopTracks(ukraine)">
+        <area shape="rect" coords="611,248,640,268" alt="poland" ng-click="getTopTracks(poland)">
+        <area shape="poly" coords="601,283,610,266,592,246,584,275" alt="germany" ng-click="getTopTracks(germany)">
+        <area shape="rect" coords="561,229,600,239" alt="denmark" ng-click="getTopTracks(denmark)">
+        <area shape="poly" coords="544,273,573,264,547,219,507,217,497,235,539,237" alt="united kingdom" ng-click="getTopTracks(united_kingdom)">
+        <area shape="rect" coords="495,250,540,265" alt="ireland" ng-click="getTopTracks(ireland)">
+        <area shape="rect" coords="550,273,585,303" alt="france" ng-click="getTopTracks(france)">
+        <area shape="rect" coords="539,305,567,332" alt="spain" ng-click="getTopTracks(spain)">
+        <area shape="rect" coords="495,312,539,330" alt="portugal" ng-click="getTopTracks(portugal)">
+        <area shape="poly" coords="610,288,624,316,609,332,590,319,586,294" alt="italy" ng-click="getTopTracks(italy)">
+        <area shape="rect" coords="635,284,654,301" alt="romania" ng-click="getTopTracks(romania)">
+        <area shape="poly" coords="621,321,644,313,649,337,618,333" alt="greece" ng-click="getTopTracks(greece)">
+        <area shape="rect" coords="639,302,678,313" alt="bulgaria" ng-click="getTopTracks(bulgaria)">
+        <area shape="rect" coords="648,316,709,332" alt="turkey" ng-click="getTopTracks(turkey)">
+        <area shape="poly" coords="664,139,876,1,1194,167,1013,305,976,252,800,240,697,279" alt="russia" ng-click="getTopTracks(russia)">
+        <area shape="poly" coords="685,289,720,289,714,313,704,312" alt="georgia" ng-click="getTopTracks(georgia)">
+        <area shape="poly" coords="720,272,797,245,854,276,824,302,741,296" alt="kazakhstan" ng-click="getTopTracks(kazakhstan)">
+        <area shape="poly" coords="858,269,950,273,933,303,885,305" alt="mongolia" ng-click="getTopTracks(mongolia)">
+        <area shape="poly" coords="864,309,938,306,964,259,1004,291,972,318,946,383,895,349,860,338" alt="china" ng-click="getTopTracks(china)">
+        <area shape="rect" coords="800,305,862,319" alt="kyrgyzstan" ng-click="getTopTracks(kyrgyzstan)">
+        <area shape="rect" coords="793,320,860,331" alt="tajikistan" ng-click="getTopTracks(tajikistan)">
+        <area shape="poly" coords="790,315,757,298,750,305,786,325" alt="uzbekistan" ng-click="getTopTracks(uzbekistan)">
+        <area shape="poly" coords="767,338,780,329,750,310,743,324" alt="turkmenistan" ng-click="getTopTracks(turkmenistan)">
+        <area shape="rect" coords="717,310,741,322"  alt="azerbaijan">
+    </map>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
     <script src="angular-spotify.js"></script>

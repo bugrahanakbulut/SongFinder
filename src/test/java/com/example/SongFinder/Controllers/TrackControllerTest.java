@@ -13,12 +13,12 @@ public class TrackControllerTest {
     @Test
     public void trackFinderTest0() {
         TrackController tc = new TrackController();
-        tc.trackFinder("turkey");
+        tc.trackFinder("turkey", "invalid_token");
     }
 
     @Test
     public void trackFinderTest1() {
         TrackController tc = new TrackController();
-        tc.trackFinder("spain");
+        tc.trackFinder("spain", "invalid_token");
     }
 }

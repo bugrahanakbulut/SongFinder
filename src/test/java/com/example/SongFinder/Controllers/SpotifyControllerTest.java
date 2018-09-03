@@ -10,21 +10,24 @@ public class SpotifyControllerTest {
 
     @Test
     public void searchTrackTest0() {
-        SpotifyTrackList list = SpotifyController.searchTrack("batsin bu dunya", "track");
+        SpotifyController controller = new SpotifyController("invalid_token");
+        SpotifyTrackList list = controller.searchTrack("batsin bu dunya", "track");
         for(Track t : list.getTrackList())
             System.out.println(t.toString());
     }
 
     @Test
     public void searchTrackTest1() {
-        SpotifyTrackList list = SpotifyController.searchTrack("birthday", "track");
+        SpotifyController controller = new SpotifyController("invalid_token");
+        SpotifyTrackList list = controller.searchTrack("birthday", "track");
         for(Track t : list.getTrackList())
             System.out.println(t.toString());
     }
 
     @Test
     public void searchTrackTest2() {
-        SpotifyTrackList list = SpotifyController.searchTrack("daydreaming", "track");
+        SpotifyController controller = new SpotifyController("invalid_token");
+        SpotifyTrackList list = controller.searchTrack("daydreaming", "track");
         for(Track t : list.getTrackList())
             System.out.println(t.toString());
     }

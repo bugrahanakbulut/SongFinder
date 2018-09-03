@@ -9,8 +9,8 @@
         <module name="SongFinder" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="7">
-      <module name="SongFinder" target="1.7" />
+    <bytecodeTargetLevel target="8">
+      <module name="SongFinder" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

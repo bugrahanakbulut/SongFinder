@@ -1,27 +1,31 @@
 
 #loginButton{
-    position: fixed;
+    position: absolute;
     top: 25px;
     left: 25px;
 }
 
 #userStatus{
-    position: fixed;
+    position: absolute;
     color: black;
     top: 25px;
     left: 300px;
 }
 
 #countryText{
-    position: fixed;
+    position: absolute;
     top: 75px;
     left: 25px;
 }
 
 #searchButton{
-    position: fixed;
+    position: absolute;
     top: 75px;
     left: 300px;
 
 }
 
+#dsk{
+    position: relative;
+    top:100px;
+}
