@@ -1,5 +1,6 @@
 package com.example.SongFinder.Entities;
 
+import com.example.SongFinder.Entities.Track;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 

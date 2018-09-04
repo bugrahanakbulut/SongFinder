@@ -105,6 +105,7 @@ angular
 
                 $scope.accesssToken = data;
                 $scope.editmode = true;
+
                 console.log("You are now logged in");
             }, function () {
                 $scope.editmode = false;

@@ -25,6 +25,12 @@
 
 }
 
+#countryOut{
+    position: absolute;
+    top: 75px;
+    left: 500px;
+}
+
 #dsk{
     position: relative;
     top:100px;

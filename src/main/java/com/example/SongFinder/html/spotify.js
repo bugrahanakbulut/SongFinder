@@ -123,6 +123,8 @@ let app = (function (window, angular, undefined) {
                     },
 
                     getTopTracks: function (country, autKey){
+                        let countryOut = document.getElementById("countryOut");
+                        countryOut.innerText = country;
                         let loaderStyle = "\n" +
                             "#loader {\n" +
                             "    position: fixed;\n" +

@@ -18,7 +18,7 @@
     <input id="countryText" type="text" ng-model="country" placeholder="Country">
     <button id="searchButton" ng-click="getTopTracks(country)">Get Top Tracks of {{country}}</button>
     <div id="dsk"><img src="world-map.gif" alt="world map" border="0" vspace="8" usemap="#Map" class="image"></div>
-
+    <div id="countryOut"></div>
     <map name="Map">
         <area shape="poly" coords="333,288,149,277,154,347,296,378" alt="United States of America" ng-click="getTopTracks(usa)">
         <area shape="poly" coords="393,289,320,3,228,3,94,132,94,273" alt="Canada" ng-click="getTopTracks(canada)">

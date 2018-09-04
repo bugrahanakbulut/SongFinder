@@ -1,27 +1,11 @@
 package com.example.SongFinder.Controllers;
 
 import com.example.SongFinder.Entities.SpotifyTrackList;
-import com.example.SongFinder.Entities.TrackList;
 import com.example.SongFinder.Exceptions.BadRequestException;
 import com.example.SongFinder.Exceptions.UnauthorizedRequestException;
-import com.google.gson.JsonObject;
 import com.wrapper.spotify.SpotifyApi;
-import com.wrapper.spotify.enums.ModelObjectType;
-import com.wrapper.spotify.exceptions.SpotifyWebApiException;
-import com.wrapper.spotify.model_objects.special.SearchResult;
-import com.wrapper.spotify.model_objects.specification.Track;
-import com.wrapper.spotify.requests.data.search.SearchItemRequest;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class SpotifyController {
