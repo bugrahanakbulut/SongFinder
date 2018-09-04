@@ -103,6 +103,8 @@ angular
 
                 $scope.accesssToken = data;
                 $scope.editmode = true;
+                let loginButton = document.getElementById('loginButton');
+                loginButton.disabled = true;
 
                 console.log("You are now logged in");
             }, function () {
