@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="094c4e14-3a70-478e-b871-0509a2714f78" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/controller.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,16 +15,18 @@
     <session id="1332032150">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="4" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="7" />
+          <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.19" value="2" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="20" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -60,7 +61,7 @@
           <entry key="html" value="4329" />
           <entry key="java" value="13750" />
           <entry key="js" value="8402" />
-          <entry key="txt" value="88" />
+          <entry key="txt" value="117" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
@@ -70,7 +71,7 @@
           <entry key="HTML" value="4224" />
           <entry key="JAVA" value="13750" />
           <entry key="JavaScript" value="8507" />
-          <entry key="PLAIN_TEXT" value="171" />
+          <entry key="PLAIN_TEXT" value="200" />
           <entry key="XML" value="6" />
         </counts>
       </usages-collector>
@@ -90,20 +91,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="103" column="42" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
+            <state relative-caret-position="578">
+              <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/spotify.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="221" column="27" lean-forward="true" selection-start-line="221" selection-start-column="27" selection-end-line="221" selection-end-column="27" />
+            <state relative-caret-position="364">
+              <caret line="228" column="39" selection-start-line="228" selection-start-column="39" selection-end-line="228" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -247,6 +248,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SongFinder" type="1abcf292:AndroidViewProjectNode" />
+              <item name="SongFinder" type="e9137016:NonAndroidModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -294,18 +307,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="SongFinder" type="1abcf292:AndroidViewProjectNode" />
-              <item name="SongFinder" type="e9137016:NonAndroidModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -320,7 +321,7 @@
     <property name="SearchEverywhereHistoryKey" value="trackR&#9;PSI&#9;JAVA://com.example.SongFinder.Repositories.TrackRepository&#10;request&#9;FILE&#9;jar://C:/Users/bugrahan.akbulut/.m2/repository/org/springframework/spring-web/4.3.18.RELEASE/spring-web-4.3.18.RELEASE.jar!/org/springframework/web/context/request/RequestAttributes.class&#10;search&#9;FILE&#9;jar://C:/Users/bugrahan.akbulut/.m2/repository/se/michaelthelin/spotify/spotify-web-api-java/2.0.4/spotify-web-api-java-2.0.4.jar!/com/wrapper/spotify/requests/data/search/SearchItemRequest.class&#10;Repository&#9;FILE&#9;jar://C:/Program Files (x86)/Java/jdk1.7.0_79/jre/lib/jfr.jar!/oracle/jrockit/jfr/Repository.class&#10;Repos&#9;FILE&#9;file://C:/Users/bugrahan.akbulut/IdeaProjects/SongFinder/src/main/java/com/example/SongFinder/Repositories" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536060215193" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536060217528" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/Programs/Git/cmd/git.exe" />
@@ -494,7 +495,9 @@
       <workItem from="1535964314342" duration="459000" />
       <workItem from="1535965501360" duration="51000" />
       <workItem from="1535969913528" duration="11666000" />
-      <workItem from="1536040207487" duration="16631000" />
+      <workItem from="1536040207487" duration="16653000" />
+      <workItem from="1536060277187" duration="1128000" />
+      <workItem from="1536063615313" duration="974000" />
     </task>
     <task id="LOCAL-00001" summary="//">
       <created>1535963950191</created>
@@ -559,7 +562,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536059724344</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="disabling login button">
+      <created>1536060235351</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1536060235351</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -595,7 +605,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183994000" />
+    <option name="totallyTimeSpent" value="186118000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -611,7 +621,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Persistence" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49916247" visible="true" weight="0.23624596" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49916247" visible="true" weight="0.24433658" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
@@ -687,7 +697,8 @@
     <MESSAGE value="git config check" />
     <MESSAGE value="click&amp;country names" />
     <MESSAGE value="server errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="server errors" />
+    <MESSAGE value="disabling login button" />
+    <option name="LAST_COMMIT_MESSAGE" value="disabling login button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -838,60 +849,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/html_demo/demo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="44" selection-start-column="44" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/html_demo/demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/html_demo/demo.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/html_demo/demo.html" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_ajax.googleapis.com_ajax_libs_angularjs_1.7.2_angular.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4437" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/htmlv2/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/htmlv2/asdfg.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/htmlv2/spotify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/htmlv2/controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/htmlV2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/htmlv2/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/htmlv2/asdfg.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/htmlv2/spotify.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/htmlv2/controller.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/htmlV2.html" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/htmlV2/spotifyV2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -962,10 +931,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/spotify.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="221" column="27" lean-forward="true" selection-start-line="221" selection-start-column="27" selection-end-line="221" selection-end-column="27" />
+        <state relative-caret-position="578">
+          <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -976,10 +945,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/controller.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/spotify.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="103" column="42" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
+        <state relative-caret-position="364">
+          <caret line="228" column="39" selection-start-line="228" selection-start-column="39" selection-end-line="228" selection-end-column="39" />
         </state>
       </provider>
     </entry>
