@@ -16,14 +16,12 @@ angular
             // console.log($scope.country);
             Spotify.getTopTracks(country, $scope.accesssToken);
             document.getElementById("countryText").value = "";
-            $scope.country = "";
         };
 
         $scope.login = function () {
             Spotify.login().then(function (data) {
                 console.log(data);
 
-                $scope.countryText = "countryText";
                 $scope.usa = "united states";
                 $scope.canada = "canada";
                 $scope.mexico = "mexico";

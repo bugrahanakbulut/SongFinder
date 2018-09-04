@@ -215,8 +215,10 @@ let app = (function (window, angular, undefined) {
                                 console.log("Request sent successfully!");
                             }
                         }, function (error) {
+                            document.getElementById("style").innerHTML = "";
+                            alert("We couldn\'t connectted to the server.");
                             console.log(error);
-                            //console.log("error");
+
                         });
 
                         return undefined;
