@@ -1,4 +1,4 @@
-(function (window, angular, undefined) {
+let app = (function (window, angular, undefined) {
     'use strict';
 
     angular
@@ -88,73 +88,51 @@
                             }
                         })
                             .then(function (response) {
-                                deferred.resolve(response.data.id);
-                        }
-                            ,function (error) {
-                                deferred.resolve(error.data);
-                            });
+                                    deferred.resolve(response.data.id);
+                                }
+                                ,function (error) {
+                                    deferred.resolve(error.data);
+                                });
                         return deferred.promise;
                     },
 
                     createPlayList: function(userProm, autKey, country){
                         let deferred = $q.defer();
                         userProm.then(function (id){
-                                let url = "https://api.spotify.com/v1/users/";
-                                url = url.concat(id);
-                                url = url.concat("/playlists");
-                                $http({method: "POST", url: url, headers:{
-                                        "Accept": "application/json",
-                                        "Content-Type" : "application/json",
-                                        "Authorization" : "Bearer ".concat(autKey)
-                                    }, data: {
-                                        name: "Top Tracks of ".concat(country),
-                                        description: "Top Tracks of ".concat(country),
-                                        public: false
-                                    }
-                                }).then(function (response){
-                                    console.log(response);
-                                    deferred.resolve(response.data)
-                                }, function (error){
-                                    console.log(error);
-                                    deferred.resolve(error);
-                                });
+                            let url = "https://api.spotify.com/v1/users/";
+                            url = url.concat(id);
+                            url = url.concat("/playlists");
+                            $http({method: "POST", url: url, headers:{
+                                    "Accept": "application/json",
+                                    "Content-Type" : "application/json",
+                                    "Authorization" : "Bearer ".concat(autKey)
+                                }, data: {
+                                    name: "Top Tracks of ".concat(country),
+                                    description: "Top Tracks of ".concat(country),
+                                    public: false
+                                }
+                            }).then(function (response){
+                                console.log(response);
+                                deferred.resolve(response.data)
+                            }, function (error){
+                                console.log(error);
+                                deferred.resolve(error);
                             });
+                        });
                         return deferred.promise;
                     },
 
                     getTopTracks: function (country, autKey){
-                        let loaderStyle = "\n" +
-                            "#loader {\n" +
-                            "    position: fixed;\n" +
-                            "    top: 501px;\n" +
-                            "    left: 500px;" +
-                            "    border: 16px solid #f3f3f3; /* Light grey */\n" +
-                            "    border-top: 16px solid #3498db; /* Blue */\n" +
-                            "    border-radius: 50%;\n" +
-                            "    width: 50px;\n" +
-                            "    height: 50px;\n" +
-                            "    animation: spin 2s linear infinite;\n" +
-                            "}\n" +
-                            "\n" +
-                            "@keyframes spin {\n" +
-                            "    0% { transform: rotate(0deg); }\n" +
-                            "    100% { transform: rotate(360deg); }\n" +
-                            "}";
-
-                        let loaderHTML = "<div id=\"loader\"></div>";
-                        document.getElementById("body").innerHTML = document.getElementById("body").innerHTML.concat(loaderHTML);21
-                        document.getElementById("style").innerHTML = loaderStyle;
-
                         let userID = this.getUserId(autKey);
                         let playListID = this.createPlayList(userID, autKey, country);
 
                         let url = " http://localhost:8080/track";
-                        let body = {
+                        let requestBody = {
                             country: country,
                             autKey: autKey
                         };
 
-                        $http.put(url, body).then(function (response) {
+                        $http.put(url, requestBody).then(function (response) {
                             // console.log(url);
                             if(response.data){
                                 console.log(response.data);
@@ -184,43 +162,34 @@
 
                                     let playListURI = playlist.uri;
                                     let splitted = playListURI.split(":");
-                                    let output = "";
-                                    output = output.concat("<iframe id=\"playerFrame\" src=\"https://open.spotify.com/embed/user/")
+                                    let iframe = "";
+                                    iframe = iframe.concat("\n\t<iframe id=\"playerFrame\" src=\"https://open.spotify.com/embed/user/");
                                     let i = 2;
                                     for(i; i <splitted.length; i++){
-                                        output = output.concat(splitted[i]);
+                                        iframe = iframe.concat(splitted[i]);
                                         if(i !== splitted.length-1)
-                                            output = output.concat("/");
+                                            iframe = iframe.concat("/");
                                     }
-                                    let body = document.getElementById("body").innerHTML;
-                                    output = output.concat("\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>")
-
-                                    let styleHTML = "#playerFrame{\n" +
-                                        "    position: absolute;\n" +
-                                        "    top: 1000px;\n" +
-                                        "    left: 25px;\n" +
-                                        "}\n";
-
-                                    document.getElementById("body").innerHTML = body.concat(output);
-                                    document.getElementById("style").innerHTML = (styleHTML);
-                                    // console.log(document.getElementById("body").innerHTML)
+                                    iframe = iframe.concat("\" width=\"300\" height=\"380\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>")
+                                    document.createElement()
+                                    //console.log(document.getElementById("body").innerHTML);
+                                    // document.getElementById("body").innerHTML = document.getElementById("body").innerHTML.concat(iframe);
+                                    //console.log(document.getElementById("body").innerHTML)
 
 
                                     // console.log(output);
                                     // document.write(output);
                                 });
+
+                                // document.getElementById("searchButton").innerHTML =  "Get Top Tracks of {{country}}";
                                 console.log("Request sent successfully!");
                             }
-                        })
-
-                                .catch(function (err) {
-                                    console.log(err);
-                                    document.getElementById("style").innerHTML = "";
-                                    alert("Error Occurred!");
-                                    throw err;
-                                });
-
-                        },
+                        }, function (error) {
+                            console.log(error);
+                            //console.log("error");
+                        });
+                        return "successful";
+                    },
 
                     setAuthToken: function (authToken) {
                         this.authToken = authToken;

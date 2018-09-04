@@ -1,5 +1,5 @@
 'use strict';
-let app = angular
+angular
     .module('exampleApp', ['spotify'])
     .config(function (SpotifyProvider) {
         SpotifyProvider.setClientId('1a0a4f93cf484f8a8ab1ce187023bdc3');
@@ -13,14 +13,17 @@ let app = angular
 
     .controller('MainController', ['$scope', 'Spotify', function ($scope, Spotify) {
         $scope.getTopTracks = function (country) {
-            alert(country);
+            // console.log($scope.country);
             Spotify.getTopTracks(country, $scope.accesssToken);
+            document.getElementById("countryText").value = "";
+            $scope.country = "";
         };
 
         $scope.login = function () {
             Spotify.login().then(function (data) {
                 console.log(data);
 
+                $scope.countryText = "countryText";
                 $scope.usa = "united states";
                 $scope.canada = "canada";
                 $scope.mexico = "mexico";
@@ -102,7 +105,7 @@ let app = angular
 
                 $scope.accesssToken = data;
                 $scope.editmode = true;
-                alert("You are now logged in");
+                console.log("You are now logged in");
             }, function () {
                 $scope.editmode = false;
                 console.log('didn\'t log in');

@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <title>Song Finder</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="spotify.js"></script>
+    <script src="controller.js"></script>
 </head>
 
 <style id="style"></style>
-
 
 <body id="body" ng-controller="MainController">
     <button id="loginButton" class="Button" ng-click="login()">Login with Spotify</button>
     <div id="userStatus" class="Text" contenteditable="true">{{editmode ? 'Online' : 'Offline'}}</div>
     <input id="countryText" type="text" ng-model="country" placeholder="Country">
-    <button id="searchButton" class="Button" ng-click="getTopTracks(country)">Get Top Tracks of {{country}}</button>
+    <button id="searchButton" ng-click="getTopTracks(country)">Get Top Tracks of {{country}}</button>
     <div id="dsk"><img src="world-map.gif" alt="world map" border="0" vspace="8" usemap="#Map" class="image"></div>
 
     <map name="Map">
@@ -95,9 +98,8 @@
         <area shape="poly" coords="643,365,668,369,680,349,646,355" alt="israel" ng-click="getTopTracks(israel)">
         <area shape="rect" coords="646,370,680,390" alt="egypt" ng-click="getTopTracks(egypt)">
     </map>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
-    <script src="angular-spotify.js"></script>
-    <script src="main.controller.js"></script>
+    <div id="body1"> PLAYLIST </div>
 </body>
+
+
 </html>
