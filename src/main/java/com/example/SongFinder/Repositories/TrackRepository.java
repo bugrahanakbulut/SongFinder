@@ -8,7 +8,6 @@ import java.util.List;
 
 @Repository
 public interface TrackRepository extends JpaRepository<Track, Long> {
-
     public List<Track> findByCountry(String country);
     public List<Track> findByIdSpotify(String idSpotify);
 }

@@ -1,26 +1,23 @@
 package com.example.SongFinder.Entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import java.util.Map;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Track {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private long dbId;
     private String idSpotify;
     private String artistName;
     private String trackName;
     private String country;
     private String spotifyUri;
-    private int rank;
+
 
     public String getSpotifyUri() {
         return spotifyUri;
@@ -70,13 +67,6 @@ public class Track {
         this.country = country;
     }
 
-    public int getRank() {
-        return this.rank;
-    }
-
-    public void setRank(int rank) {
-        this.rank = rank;
-    }
 
     @Override
     public String toString() {

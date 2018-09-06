@@ -55,6 +55,7 @@ public class TrackController {
     public TrackController(TrackRepository trackRepo){
         this.trackRepo = trackRepo;
         this.trackList = new ArrayList<>();
+        // this.trackDAO = trackDAO;
     }
 
     @RequestMapping(method = RequestMethod.GET)
@@ -84,11 +85,14 @@ public class TrackController {
                 this.trackList.add(t);
             }
             ArrayList<Track> results = searchTracks(popularTracks, requestBody.getAutKey());
+
             for(Track t : results){
                 List<Track> duplicate = trackRepo.findByIdSpotify(t.getIdSpotify());
                 if(duplicate.size() == 0)
                     trackRepo.save(t);
             }
+
+
         } catch (BadRequestException | UnauthorizedRequestException e){
             e.printStackTrace();
         }
@@ -131,8 +135,6 @@ public class TrackController {
                 for(Track result : searchResult.getTrackList()){
                     if(result.getArtistName().toLowerCase().equals(searchItem.getArtistName().toLowerCase())
                             && result.getTrackName().toLowerCase().equals(searchItem.getTrackName().toLowerCase())){
-
-                        result.setRank(searchItem.getRank());
                         result.setCountry(searchItem.getCountry());
                         founded.add(result);
                         // searchResult.getTrackList().remove(result);

@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 @Entity
-@RequestMapping(value = "/artists")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Artist {
     @Id

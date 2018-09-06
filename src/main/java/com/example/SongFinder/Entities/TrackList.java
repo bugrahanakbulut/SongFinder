@@ -37,7 +37,6 @@ public class TrackList {
             LinkedHashMap artist = (LinkedHashMap) map.get("artist");
             track.setArtistName((String) artist.get("name"));
             LinkedHashMap attr = (LinkedHashMap) map.get("@attr");
-            track.setRank(Integer.valueOf((String) attr.get("rank")));
             this.getTrackList().add(track);
         }
     }
