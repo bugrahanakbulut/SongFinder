@@ -78,23 +78,18 @@ public class TrackController {
         requesBase += "&limit=10";
         requesBase += "&format=json";
         // System.out.println(requesBase);
-        try {
-            TrackList popularTracks = RequestController.getRequest(requesBase, TrackList.class, null);
-            for (Track t : popularTracks.getTrackList()) {
-                t.setCountry(requestBody.getCountry());
-                this.trackList.add(t);
-            }
-            ArrayList<Track> results = searchTracks(popularTracks, requestBody.getAutKey());
 
-            for(Track t : results){
-                List<Track> duplicate = trackRepo.findByIdSpotify(t.getIdSpotify());
-                if(duplicate.size() == 0)
-                    trackRepo.save(t);
-            }
+        TrackList popularTracks = RequestController.restfulGetRequest(requesBase, TrackList.class, null);
+        for (Track t : popularTracks.getTrackList()) {
+            t.setCountry(requestBody.getCountry());
+            this.trackList.add(t);
+        }
+        ArrayList<Track> results = searchTracks(popularTracks, requestBody.getAutKey());
 
-
-        } catch (BadRequestException | UnauthorizedRequestException e){
-            e.printStackTrace();
+        for(Track t : results){
+           List<Track> duplicate = trackRepo.findByIdSpotify(t.getIdSpotify());
+           if(duplicate.size() == 0)
+               trackRepo.save(t);
         }
 
         return trackRepo.findByCountry(requestBody.getCountry());
@@ -108,19 +103,16 @@ public class TrackController {
         requesBase += "&api_key=56ad71507512a288c28c1fffb1be0a19";
         requesBase += "&limit=10";
         requesBase += "&format=json";
-        try {
-            TrackList popularTracks = RequestController.getRequest(requesBase, TrackList.class, null);
-            for (Track t : popularTracks.getTrackList()) {
-                t.setCountry(country);
-                this.trackList.add(t);
-                System.out.println(t.toString());
-            }
-            ArrayList<Track> results = searchTracks(popularTracks, autToken);
-            return results;
-        } catch (BadRequestException | UnauthorizedRequestException e){
-            e.printStackTrace();
-            return null;
+
+        TrackList popularTracks = RequestController.restfulGetRequest(requesBase, TrackList.class, null);
+        for (Track t : popularTracks.getTrackList()) {
+            t.setCountry(country);
+            this.trackList.add(t);
+            System.out.println(t.toString());
         }
+        ArrayList<Track> results = searchTracks(popularTracks, autToken);
+        return results;
+
     }
 
     public ArrayList<Track> searchTracks(TrackList trackList2Search, String autToken){
