@@ -44,12 +44,9 @@ public class SpotifyController {
         Map<String, String> header = new HashMap<>();
         header.put("Authorization", "Bearer " + this.getAutToken());
         // System.out.println(http.toString());
-        try {
-            SpotifyTrackList trackList = RequestController.getRequest(http.toString(), SpotifyTrackList.class, header);
-            return trackList;
-        } catch (BadRequestException | UnauthorizedRequestException e){
-            System.out.println(e.getMessage());
-            return null;
-        }
+
+        SpotifyTrackList trackList = RequestController.restfulGetRequest(http.toString(), SpotifyTrackList.class, header);
+        return trackList;
+
     }
 }
