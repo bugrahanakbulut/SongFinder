@@ -1,6 +1,7 @@
 package com.example.SongFinder.Controllers;
 
 import com.example.SongFinder.Entities.Track;
+import com.example.SongFinder.Entities.TrackList;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.json.JSONException;
@@ -62,5 +63,16 @@ public class RequestControllerTest {
                 "\"surname\":\"qwertyasdfg\"}";
         Person asd = RequestController.jsonDeserializer(json, Person.class);
         System.out.println(asd.toString());
+    }
+
+    @Test
+    public void restfulGetRequestTest0(){
+        String url = "http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=turkey" +
+                "&api_key=56ad71507512a288c28c1fffb1be0a19&limit=10&format=json";
+
+        TrackList tl = RequestController.restfulGetRequest(url, TrackList.class, null);
+        for(Track t : tl.getTrackList()){
+            System.out.println(t.toString());
+        }
     }
 }
