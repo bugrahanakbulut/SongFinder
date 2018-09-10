@@ -11,6 +11,11 @@ import com.fasterxml.jackson.databind.type.TypeFactory;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -101,7 +106,21 @@ public class RequestController {
         }
         return newObj;
     }
-
+    public static <T> T restfulGetRequest(String url, Class expected_class, Map<String, String> header) {
+        StringBuilder jsonResults = new StringBuilder();
+        T newObj = null;
+        HttpHeaders headers = new HttpHeaders();
+        if(header != null){
+            for(Map.Entry<String, String> entry : header.entrySet()){
+                headers.add(entry.getKey(), entry.getValue());
+            }
+        }
+        HttpEntity<String> requestEntity = new HttpEntity<String>(headers);
+        RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<T> responseEntity = restTemplate.exchange(url, HttpMethod.GET, requestEntity, expected_class, 1 );
+        T res = responseEntity.getBody();
+        return res;
+    }
     public static <T> T jsonDeserializer(String jsonResults, Class expectedClass) throws JSONException, IOException {
         JSONObject jsonObject = new JSONObject(jsonResults.toString());
         ObjectMapper mapper = new ObjectMapper();

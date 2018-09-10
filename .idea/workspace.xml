@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="094c4e14-3a70-478e-b871-0509a2714f78" name="Default Changelist" comment="attaching trello and github">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/Test.java" afterDir="false" />
+    <list default="true" id="094c4e14-3a70-478e-b871-0509a2714f78" name="Default Changelist" comment="fixing bugs in searching tracks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SongFinder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SongFinder.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/RequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/RequestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/TrackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/TrackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/Artist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/Artist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/Track.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/TrackList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/TrackList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Repositories/TrackRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Repositories/TrackRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/spotify.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/spotify.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,18 +19,18 @@
     <session id="1332032150">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="23" />
+          <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="5" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.14" value="8" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.19" value="2" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="24" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -45,10 +39,10 @@
           <entry key="css" value="5" />
           <entry key="gitattributes" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="44" />
+          <entry key="html" value="46" />
           <entry key="iml" value="1" />
-          <entry key="java" value="149" />
-          <entry key="js" value="65" />
+          <entry key="java" value="160" />
+          <entry key="js" value="66" />
           <entry key="pom" value="1" />
           <entry key="properties" value="6" />
           <entry key="xml" value="6" />
@@ -58,10 +52,10 @@
         <counts>
           <entry key="CLASS" value="24" />
           <entry key="CSS" value="5" />
-          <entry key="HTML" value="44" />
+          <entry key="HTML" value="46" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="149" />
-          <entry key="JavaScript" value="65" />
+          <entry key="JAVA" value="160" />
+          <entry key="JavaScript" value="66" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="6" />
           <entry key="XML" value="7" />
@@ -72,10 +66,10 @@
           <entry key="css" value="672" />
           <entry key="dummy" value="84" />
           <entry key="html" value="4329" />
-          <entry key="java" value="15594" />
-          <entry key="js" value="8402" />
+          <entry key="java" value="16533" />
+          <entry key="js" value="8404" />
           <entry key="properties" value="52" />
-          <entry key="txt" value="144" />
+          <entry key="txt" value="365" />
           <entry key="xml" value="9" />
         </counts>
       </usages-collector>
@@ -83,11 +77,16 @@
         <counts>
           <entry key="CSS" value="672" />
           <entry key="HTML" value="4224" />
-          <entry key="JAVA" value="15594" />
-          <entry key="JavaScript" value="8507" />
-          <entry key="PLAIN_TEXT" value="228" />
+          <entry key="JAVA" value="16533" />
+          <entry key="JavaScript" value="8509" />
+          <entry key="PLAIN_TEXT" value="449" />
           <entry key="Properties" value="52" />
           <entry key="XML" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.create.new" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -96,24 +95,30 @@
     <favorites_list name="SongFinder" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="36" lean-forward="true" selection-end-line="1" />
+            <state relative-caret-position="442">
+              <caret line="26" column="56" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/Track.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/spotify.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="2754">
+              <caret line="162" column="13" selection-start-line="162" selection-start-column="13" selection-end-line="162" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/Artist.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -121,10 +126,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/TrackController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="137" column="24" selection-start-line="137" selection-start-column="24" selection-end-line="137" selection-end-column="24" />
+            <state relative-caret-position="177">
+              <caret line="118" column="4" selection-start-line="118" selection-start-column="4" selection-end-line="118" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#897#898#0" expanded="true" />
+                <element signature="e#934#935#0" expanded="true" />
                 <element signature="e#1647#1648#0" expanded="true" />
                 <element signature="e#1689#1690#0" expanded="true" />
               </folding>
@@ -132,11 +139,37 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/TrackList.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Repositories/TrackRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="102">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/RequestController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4607#4615#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/SpotifyController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+              <folding>
+                <element signature="e#917#918#0" expanded="true" />
+                <element signature="e#948#949#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -187,8 +220,18 @@
     </option>
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="WARN_ABOUT_DETACHED_HEAD" value="false" />
     <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="master" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="bugrahanakbulut" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="SongFinder" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -198,7 +241,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Exceptions/InvalidAccessTokenException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Exceptions/UnauthorizedRequestException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Exceptions/BadRequestException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/RequestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/fend.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/app.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/js/js.js" />
@@ -210,13 +252,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/callback.html" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/SongFinder/Controllers/SpotifyControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/SongFinder/Controllers/TrackControllerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/SpotifyController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/SpotifyTrackList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/countries/plylistObj.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/countries/playlist.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/countries/united_states.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/united_states.html" />
-        <option value="$PROJECT_DIR$/src/test/java/com/example/SongFinder/Controllers/RequestControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/html_demo/demo.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/html_demo/demo.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/main.controller.js" />
@@ -232,18 +272,21 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/htmlV2/spotifyV2.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/htmlV2/controllerV2.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/style.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/spotify.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/controller.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Repositories/TrackDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Repositories/TrackRepository.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/Artist.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/Track.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/TrackController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/TrackList.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/example/SongFinder/Controllers/RequestControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/SpotifyController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/spotify.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Repositories/TrackRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/TrackController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/RequestController.java" />
       </list>
     </option>
   </component>
@@ -254,8 +297,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-21" />
-    <option name="y" value="26" />
+    <option name="x" value="-36" />
+    <option name="y" value="-20" />
     <option name="width" value="1300" />
     <option name="height" value="944" />
   </component>
@@ -282,7 +325,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -346,6 +388,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="Exceptions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SongFinder" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="SongFinder" type="462c0819:PsiDirectoryNode" />
               <item name="html" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -380,6 +431,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -395,7 +447,7 @@
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536223180284" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536325777693" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/databasedemo" />
@@ -467,7 +519,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpotifyControllerTest.searchTrackTest0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RequestControllerTest.restfulGetRequestTest0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SongFinder" />
       <extension name="coverage">
         <pattern>
@@ -476,8 +528,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.SongFinder.Controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.example.SongFinder.Controllers.SpotifyControllerTest" />
-      <option name="METHOD_NAME" value="searchTrackTest0" />
+      <option name="MAIN_CLASS_NAME" value="com.example.SongFinder.Controllers.RequestControllerTest" />
+      <option name="METHOD_NAME" value="restfulGetRequestTest0" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -524,19 +576,19 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.SongFinderApplication" />
-      <item itemvalue="JUnit.SpotifyControllerTest.searchTrackTest0" />
       <item itemvalue="JUnit.SpotifyControllerTest.searchTrackTest1" />
       <item itemvalue="JUnit.SpotifyControllerTest.searchTrackTest2" />
       <item itemvalue="JUnit.RequestControllerTest.jsonDeserializer" />
       <item itemvalue="JUnit.RequestControllerTest.jsonDeserializerTest1" />
+      <item itemvalue="JUnit.RequestControllerTest.restfulGetRequestTest0" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RequestControllerTest.restfulGetRequestTest0" />
         <item itemvalue="JUnit.RequestControllerTest.jsonDeserializerTest1" />
         <item itemvalue="JUnit.RequestControllerTest.jsonDeserializer" />
         <item itemvalue="JUnit.SpotifyControllerTest.searchTrackTest2" />
         <item itemvalue="JUnit.SpotifyControllerTest.searchTrackTest1" />
-        <item itemvalue="JUnit.SpotifyControllerTest.searchTrackTest0" />
       </list>
     </recent_temporary>
   </component>
@@ -573,7 +625,12 @@
       <workItem from="1536060277187" duration="1128000" />
       <workItem from="1536063615313" duration="1594000" />
       <workItem from="1536125750044" duration="9984000" />
-      <workItem from="1536212276793" duration="10606000" />
+      <workItem from="1536212276793" duration="15238000" />
+      <workItem from="1536242107587" duration="764000" />
+      <workItem from="1536298667973" duration="790000" />
+      <workItem from="1536299525480" duration="6326000" />
+      <workItem from="1536557956818" duration="946000" />
+      <workItem from="1536559423974" duration="618000" />
     </task>
     <task id="LOCAL-00001" summary="//">
       <created>1535963950191</created>
@@ -652,22 +709,38 @@
       <option name="project" value="LOCAL" />
       <updated>1536064610867</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="connecting mySQL">
+      <created>1536223272639</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1536223272639</updated>
+    </task>
+    <task id="LOCAL-00013" summary="branch check">
+      <created>1536224056405</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1536224056405</updated>
+    </task>
+    <task id="LOCAL-00014" summary="refactoring requests with restful services">
+      <created>1536299663179</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1536299663179</updated>
+    </task>
+    <task id="LOCAL-00015" summary="replacing http requests with restful services">
+      <created>1536300289177</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1536300289177</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SpotifyControllerTest_searchTrackTest1 - 2018.08.17 at 09h 55m 35s.xml">
-      <configuration name="SpotifyControllerTest.searchTrackTest1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SpotifyControllerTest_searchTrackTest2 - 2018.08.17 at 09h 56m 00s.xml">
-      <configuration name="SpotifyControllerTest.searchTrackTest2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RequestControllerTest_jsonDeserializer - 2018.08.17 at 10h 44m 40s.xml">
-      <configuration name="RequestControllerTest.jsonDeserializer" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RequestControllerTest_jsonDeserializer - 2018.08.17 at 10h 45m 36s.xml">
-      <configuration name="RequestControllerTest.jsonDeserializer" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RequestControllerTest_jsonDeserializerTest1 - 2018.08.17 at 10h 46m 09s.xml">
       <configuration name="RequestControllerTest.jsonDeserializerTest1" configurationId="JUnit" />
     </history-entry>
@@ -686,9 +759,21 @@
     <history-entry file="RequestControllerTest_jsonDeserializerTest1 - 2018.08.27 at 14h 53m 23s.xml">
       <configuration name="RequestControllerTest.jsonDeserializerTest1" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RequestControllerTest_restfulGetRequestTest0 - 2018.09.07 at 08h 50m 25s.xml">
+      <configuration name="RequestControllerTest.restfulGetRequestTest0" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RequestControllerTest_restfulGetRequestTest0 - 2018.09.07 at 08h 50m 58s.xml">
+      <configuration name="RequestControllerTest.restfulGetRequestTest0" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RequestControllerTest_restfulGetRequestTest0 - 2018.09.07 at 08h 53m 23s.xml">
+      <configuration name="RequestControllerTest.restfulGetRequestTest0" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RequestControllerTest_restfulGetRequestTest0 - 2018.09.07 at 09h 02m 54s.xml">
+      <configuration name="RequestControllerTest.restfulGetRequestTest0" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207328000" />
+    <option name="totallyTimeSpent" value="221404000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -705,7 +790,7 @@
     <layout>
       <window_info id="Repositories" order="0" weight="0.32928804" />
       <window_info id="Persistence" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49916247" visible="true" weight="0.2524272" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49916247" visible="true" weight="0.26860842" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="4" />
       <window_info id="Image Layers" order="5" />
@@ -715,7 +800,7 @@
       <window_info id="Web" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290993" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30946884" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3308642" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3995381" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -749,10 +834,29 @@
           <value>
             <State>
               <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
+                <collection>
+                  <UserGroup>
+                    <option name="users">
+                      <list>
+                        <option value="me" />
+                      </list>
+                    </option>
+                  </UserGroup>
+                </collection>
               </option>
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
                 <collection />
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="me" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
               </option>
               <option name="COLUMN_ORDER">
                 <list>
@@ -783,7 +887,12 @@
     <MESSAGE value="server errors" />
     <MESSAGE value="disabling login button" />
     <MESSAGE value="attaching trello and github" />
-    <option name="LAST_COMMIT_MESSAGE" value="attaching trello and github" />
+    <MESSAGE value="connecting mySQL" />
+    <MESSAGE value="branch check" />
+    <MESSAGE value="refactoring requests with restful services" />
+    <MESSAGE value="replacing http requests with restful services" />
+    <MESSAGE value="fixing bugs in searching tracks" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing bugs in searching tracks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -813,13 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/SongFinder/Controllers/RequestControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -883,38 +985,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/dao/TrackDAO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/spotify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="156" column="26" lean-forward="true" selection-start-line="156" selection-start-column="26" selection-end-line="156" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/SpotifyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
-          <folding>
-            <element signature="e#917#918#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/RequestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="55" column="12" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-dependencies/1.5.15.RELEASE/spring-boot-dependencies-1.5.15.RELEASE.pom">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -926,10 +996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="444" column="25" selection-start-line="444" selection-start-column="25" selection-end-line="444" selection-end-column="25" />
-          <folding>
-            <element signature="e#15349#15350#0" expanded="true" />
-            <element signature="e#15393#15394#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -954,22 +1020,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Repositories/TrackDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#570#571#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#1333#1334#0" expanded="true" />
-            <element signature="e#1392#1393#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Repositories/TrackDAO.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Repositories/ArtistRepo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1040,24 +1091,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Repositories/TrackRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/SongFinderApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-          <folding>
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1072,23 +1109,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/Artist.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/TrackList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" lean-forward="true" selection-end-line="1" />
+        <state relative-caret-position="187">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -1102,22 +1129,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="36" lean-forward="true" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/SongFinder/Controllers/RequestControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="73" column="41" lean-forward="true" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="56" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/html/spotify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2754">
+          <caret line="162" column="13" selection-start-line="162" selection-start-column="13" selection-end-line="162" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/Artist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/SpotifyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+          <folding>
+            <element signature="e#917#918#0" expanded="true" />
+            <element signature="e#948#949#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Repositories/TrackRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/TrackController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="137" column="24" selection-start-line="137" selection-start-column="24" selection-end-line="137" selection-end-column="24" />
+        <state relative-caret-position="177">
+          <caret line="118" column="4" selection-start-line="118" selection-start-column="4" selection-end-line="118" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#897#898#0" expanded="true" />
+            <element signature="e#934#935#0" expanded="true" />
             <element signature="e#1647#1648#0" expanded="true" />
             <element signature="e#1689#1690#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Entities/TrackList.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/SongFinder/Controllers/RequestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="177">
+          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4607#4615#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
